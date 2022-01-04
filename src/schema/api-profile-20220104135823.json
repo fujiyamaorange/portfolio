@@ -1,0 +1,14 @@
+{
+  "apiFields": [
+    {
+      "idValue": "KGyzibkeZ8",
+      "fieldId": "name",
+      "name": "名前",
+      "kind": "text"
+    },
+    { "fieldId": "introduce", "name": "自己紹介", "kind": "richEditor" },
+    { "fieldId": "image", "name": "プロフィール画像", "kind": "media" },
+    { "fieldId": "hobby", "name": "趣味", "kind": "textArea" }
+  ],
+  "customFields": []
+}
