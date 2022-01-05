@@ -1,8 +1,3 @@
-import type {
-  NextPage,
-  InferGetStaticPropsType,
-  GetStaticPropsContext,
-} from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 
