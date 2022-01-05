@@ -278,6 +278,11 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
   integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
+"@types/animejs@^3.1.4":
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/@types/animejs/-/animejs-3.1.4.tgz#92f90d1c800b9041b64a7da9da0e68e690146b0e"
+  integrity sha512-WUjeFT2SXd6intfE6cg6eL1jk/JL88JqM2gC4WqO4iHLmbCvHUq6aoLK13lGpDWs4FtS2PHoYraJZ0dEx99Dyg==
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
@@ -404,6 +409,11 @@ ajv@^6.10.0, ajv@^6.12.4:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
+
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
 anser@1.4.9:
   version "1.4.9"
