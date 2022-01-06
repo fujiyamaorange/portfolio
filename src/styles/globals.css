@@ -8,6 +8,25 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* cursor: url('/cursor20.png'), auto; */
+}
+
+#cursor {
+  height: 50px;
+  width: 50px;
+  background: #e7c82f;
+  opacity: 50%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  display: none;
+  /* transition-duration: 0.5s; */
+  /* transition-timing-function: ease-out; */
+}
+
+a:hover,
+button:hover {
+  /* cursor: url('/cursor35.png'), auto; */
 }
 
 a {
