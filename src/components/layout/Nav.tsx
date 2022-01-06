@@ -19,7 +19,9 @@ export const Nav: React.VFC = () => {
       <h1>Portfolio</h1>
       <ul className="flex space-x-4">
         {menus.map((menu) => (
-          <li key={menu.name}>{menu.name}</li>
+          <button>
+            <li key={menu.name}>{menu.name}</li>
+          </button>
         ))}
       </ul>
     </header>
