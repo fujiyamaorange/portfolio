@@ -9,6 +9,15 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   cursor: url('/cursor20.png'), auto;
+  /* Microsoft Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  /* Google Chrome, Safari */
+  display: none;
 }
 
 /**
