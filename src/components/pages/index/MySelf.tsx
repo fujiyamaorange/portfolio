@@ -37,7 +37,7 @@ export const MySelf: React.VFC<Props> = (props) => {
   }, [])
 
   return (
-    <main className="bg-black text-white">
+    <main className="text-white">
       <Div100vh className="flex relative items-center justify-center select-none">
         <span className="font-semibold text-2xl" ref={el} />
       </Div100vh>
@@ -54,7 +54,8 @@ export const MySelf: React.VFC<Props> = (props) => {
             <p>{hobby}</p>
           </>
         )}
-        <h1>残りの要素</h1>
+        <button onClick={() => console.log('button clicked')}>ボタン</button>
+        <a href="http://localhost:300">リンク</a>
       </section>
     </main>
   )
