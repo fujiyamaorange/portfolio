@@ -28,19 +28,7 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 }
 
 const Home: NextPage<Props> = (props) => {
-  return (
-    <div>
-      <Head>
-        <title>FujiyamaOrange Portfolio</title>
-        <meta name="description" content="Fujimura Kaito Portfilio" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <MySelf data={props.data} />
-      </main>
-    </div>
-  )
+  return <MySelf data={props.data} />
 }
 
 export default Home
