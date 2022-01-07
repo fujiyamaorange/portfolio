@@ -11,9 +11,7 @@ type Props = { data: profile }
 export const MySelf: React.VFC<Props> = (props) => {
   const { name, image } = props.data
 
-  // Create reference to store the DOM element containing the animation
   const el = useRef(null!)
-  // Create reference to store the Typed instance itself
   const typed = useRef<Typed>(null!)
 
   useEffect(() => {
@@ -27,7 +25,6 @@ export const MySelf: React.VFC<Props> = (props) => {
       backSpeed: 30,
     }
 
-    // elRef refers to the <span> rendered below
     typed.current = new Typed(el.current, options)
 
     return () => {

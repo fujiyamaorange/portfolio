@@ -78,7 +78,7 @@ export const ShootingStars = () => {
   }
 
   return (
-    <div className="bg-black fixed inset-0 overflow-hidden">
+    <div className="fixed inset-0 overflow-hidden bg-black">
       <svg className={clsx(styles['sky'], 'sky')}>
         {[...Array(num)].map((_, y) => (
           <circle
@@ -94,7 +94,7 @@ export const ShootingStars = () => {
         ))}
       </svg>
       <div className={clsx(styles['shootingstars'], 'shootingstars')}>
-        {[...Array(60)].map((_, y) => (
+        {[...Array(num)].map((_, y) => (
           <div
             key={y}
             className={clsx(styles['wish'], 'wish')}

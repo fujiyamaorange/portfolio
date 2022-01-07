@@ -3,7 +3,6 @@ import type {
   InferGetStaticPropsType,
   GetStaticPropsContext,
 } from 'next'
-import Head from 'next/head'
 
 import { getProfile } from '@/libs/microCMS/getProfile'
 import { MySelf } from '@/components/pages/index/MySelf'
