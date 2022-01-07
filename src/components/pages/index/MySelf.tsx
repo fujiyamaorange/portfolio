@@ -35,7 +35,10 @@ export const MySelf: React.VFC<Props> = (props) => {
   return (
     <main className="text-white">
       <Div100vh className="relative flex items-center justify-center select-none">
-        <span className="text-2xl font-semibold" ref={el} />
+        <span
+          className="text-2xl font-semibold text-transparent sm:text-4xl bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500"
+          ref={el}
+        />
       </Div100vh>
       <section className="flex flex-col items-center justify-center">
         <Image
