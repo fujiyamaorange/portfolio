@@ -4,11 +4,12 @@ import Typed from 'typed.js'
 
 import { profile } from '@/types/cms-types'
 import { Div100vh } from '@/components/basic/Div100vh'
+import { Terminal } from '@/components/anime/Terminal'
 
 type Props = { data: profile }
 
 export const MySelf: React.VFC<Props> = (props) => {
-  const { name, introduce, image, hobby } = props.data
+  const { name, image } = props.data
 
   // Create reference to store the DOM element containing the animation
   const el = useRef(null!)
@@ -30,32 +31,26 @@ export const MySelf: React.VFC<Props> = (props) => {
     typed.current = new Typed(el.current, options)
 
     return () => {
-      // Make sure to destroy Typed instance during cleanup
-      // to prevent memory leaks
       typed.current.destroy()
     }
   }, [])
 
   return (
     <main className="text-white">
-      <Div100vh className="flex relative items-center justify-center select-none">
-        <span className="font-semibold text-2xl" ref={el} />
+      <Div100vh className="relative flex items-center justify-center select-none">
+        <span className="text-2xl font-semibold" ref={el} />
       </Div100vh>
+      <section className="flex flex-col items-center justify-center">
+        <Image
+          src={image.url}
+          width={image.width}
+          height={image.height}
+          className="rounded-full"
+        />
+        <span className="mt-4 font-semibold">{name}</span>
+      </section>
       <section>
-        {props && (
-          <>
-            <h3>名前</h3>
-            <p>{name}</p>
-            <h3>自己紹介</h3>
-            <div dangerouslySetInnerHTML={{ __html: introduce }}></div>
-            <h3>画像</h3>
-            <Image src={image.url} width={image.width} height={image.height} />
-            <h3>趣味</h3>
-            <p>{hobby}</p>
-          </>
-        )}
-        <button onClick={() => console.log('button clicked')}>ボタン</button>
-        <a href="http://localhost:300">リンク</a>
+        <Terminal data={props.data} />
       </section>
     </main>
   )
