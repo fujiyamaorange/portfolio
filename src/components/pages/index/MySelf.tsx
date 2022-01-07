@@ -46,6 +46,7 @@ export const MySelf: React.VFC<Props> = (props) => {
           width={image.width}
           height={image.height}
           className="rounded-full"
+          aria-hidden="true"
         />
         <span className="mt-4 font-semibold">{name}</span>
       </section>
