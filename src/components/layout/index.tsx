@@ -21,10 +21,10 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <>
       {/* ヘッダーと背景のアニメーション */}
+      {/* <div id="cursor"></div> */}
       <ShootingStars />
       <Nav />
-      <div id="cursor"></div>
-      {children}
+      <div className="relative z-10">{children}</div>
     </>
   )
 }
