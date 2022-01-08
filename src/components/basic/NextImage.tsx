@@ -1,9 +1,9 @@
 import Image, { ImageProps } from 'next/image'
 
-export const NextImage: React.VFC<ImageProps> = (props) => {
+export const NextImage: React.VFC<ImageProps> = ({ className, ...others }) => {
   return (
-    <div>
-      <Image {...props} />
+    <div className={className}>
+      <Image {...others} />
     </div>
   )
 }
