@@ -23,6 +23,7 @@ export const MySelf: React.VFC<Props> = (props) => {
       ],
       typeSpeed: 100,
       backSpeed: 30,
+      loop: true,
     }
 
     typed.current = new Typed(el.current, options)
