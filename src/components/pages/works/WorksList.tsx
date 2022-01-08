@@ -43,6 +43,7 @@ export const WorksList: React.VFC<Props> = (props) => {
               </div>
               <div className="flex space-x-4">
                 <Image src="/wrench.svg" width="24" height="24" />
+                {/* TODO */}
                 <p>
                   {work.skill.map((skill: SKILL) => (
                     <p key={skill} className="text-base">
