@@ -17,6 +17,35 @@ type Structure<T, P> = T extends 'get'
   ? GetsType<{ id: string } & DateType & Required<P>>
   : Partial<DateType> & (T extends 'patch' ? Partial<P> : P);
 
+export type works<T='get'> = Structure<
+T,
+{
+  /**
+   * タイトル
+   */
+  title?: string
+  /**
+   * 説明
+   */
+  explanation?: string
+  /**
+   * 期間
+   */
+  period?: string
+  /**
+   * 人数
+   */
+  people?: string
+  /**
+   * 役割
+   */
+  role?: string
+  /**
+   * 使用技術
+   */
+  skill?: ('TypeScript' | 'JavaScript' | 'Python' | 'C' | 'Java' | 'C++' | 'React' | 'Vue.js' | 'Svelte' | 'Angular' | 'Next.js' | 'Nuxt.js' | 'Dart' | 'Flutter' | 'Figma' | 'Github' | 'Firebase Firestore' | 'Firebase Cloud Storage' | 'Firebase Cloud Function' | 'Firebase Authentication' | 'GCP' | 'AWS' | 'TailwindCSS' | 'Node.js' | 'HTML' | 'CSS' | 'styled-jsx' | 'microCMS' | 'Express' | 'NestJS' | 'Apollo' | 'GraphQL' | 'Heroku' | 'Vercel' | 'Redux' | 'Recoil')[]
+}>
+
 export type profile<T='get'> = Structure<
 T,
 {
@@ -41,18 +70,23 @@ T,
 
 export interface EndPoints {
   get: {
+    works: works<'get'>
     profile: profile<'get'>
   }
   gets: {
+    works: works<'gets'>
     profile: profile<'gets'>
   }
   post: {
+    works: works<'post'>
     profile: profile<'post'>
   }
   put: {
+    works: works<'put'>
     profile: profile<'put'>
   }
   patch: {
+    works: works<'patch'>
     profile: profile<'patch'>
   }
 }
