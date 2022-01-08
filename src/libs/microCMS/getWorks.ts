@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios'
 
-import { works } from '../../types/cms-types'
+import { works } from '@/types/cms-types'
 
 const WORKS_API_KEY: string = process.env.WORKS_API_KEY || ''
 const ENDPOINT: string = process.env.ENDPOINT || ''
