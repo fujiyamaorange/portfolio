@@ -3,16 +3,22 @@ import anime from 'animejs'
 import clsx from 'clsx'
 
 import styles from '@/styles/ShootingStartsStyle.module.css'
+import { on } from '@/utils/on'
+import { off } from '@/utils/off'
 
 export const ShootingStars = () => {
+  const isBrowser = typeof window !== 'undefined'
+
   const [vw, setVw] = useState<number>(0)
   const [vh, setVh] = useState<number>(0)
   const [radius, setRadius] = useState<number>(0)
 
-  const num = 120
+  const NUM = 120
 
   useEffect(() => {
-    if (window && document) {
+    if (!isBrowser) return
+
+    const handler = () => {
       setVw(
         Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
       )
@@ -20,8 +26,16 @@ export const ShootingStars = () => {
         Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
       )
       starryNight()
-      shootingStars()
-      setRadius(randomRadius())
+    }
+
+    handler()
+    shootingStars()
+    setRadius(randomRadius())
+
+    on(window, 'resize', handler)
+
+    return () => {
+      off(window, 'resize', handler)
     }
   }, [])
 
@@ -80,7 +94,7 @@ export const ShootingStars = () => {
   return (
     <div className="fixed inset-0 overflow-hidden bg-black">
       <svg className={clsx(styles['sky'], 'sky')}>
-        {[...Array(num)].map((_, y) => (
+        {[...Array(NUM)].map((_, y) => (
           <circle
             cx={getRandomX()}
             cy={getRandomY()}
@@ -94,7 +108,7 @@ export const ShootingStars = () => {
         ))}
       </svg>
       <div className={clsx(styles['shootingstars'], 'shootingstars')}>
-        {[...Array(num)].map((_, y) => (
+        {[...Array(NUM)].map((_, y) => (
           <div
             key={y}
             className={clsx(styles['wish'], 'wish')}
