@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
 import '../styles/globals.css'
@@ -10,13 +9,13 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <NextSeo
         title="FujiyamaOrange Portfolio"
-        description="fujiyamaorange portfolio"
+        description="フジムラカイトのポートフォリオサイト"
         canonical="https://fujiyamaorange.vercel.app"
         openGraph={{
           url: 'https://fujiyamaorange.vercel.app',
           type: 'website',
           title: 'fujiyamaorange portfolio',
-          description: 'FujiyamaOrange Portfolio',
+          description: 'フジムラカイトのポートフォリオサイト',
           locale: 'jp_JP',
           images: [
             {
