@@ -5,11 +5,15 @@ import Typed from 'typed.js'
 import { profile } from '@/types/cms-types'
 import { Div100vh } from '@/components/basic/Div100vh'
 import { Terminal } from '@/components/anime/Terminal'
+import useMedia from '@/hooks/useMedia'
+import { CameraScreen } from '@/components/anime/CameraScreen'
 
 type Props = { data: profile }
 
 export const MySelf: React.VFC<Props> = (props) => {
   const { name, image } = props.data
+
+  const isUnder540 = useMedia('(max-width: 540px)')
 
   const el = useRef(null!)
   const typed = useRef<Typed>(null!)
@@ -52,7 +56,13 @@ export const MySelf: React.VFC<Props> = (props) => {
         <span className="mt-4 font-semibold">{name}</span>
       </section>
       <section>
-        <Terminal data={props.data} />
+        {isUnder540 ? (
+          <CameraScreen>
+            <h1>this is camera screen section</h1>
+          </CameraScreen>
+        ) : (
+          <Terminal data={props.data} />
+        )}
       </section>
     </main>
   )
