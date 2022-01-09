@@ -43,7 +43,7 @@ T,
   /**
    * 使用技術
    */
-  skill?: ('TypeScript' | 'JavaScript' | 'Python' | 'C' | 'Java' | 'C++' | 'React' | 'Vue.js' | 'Svelte' | 'Angular' | 'Next.js' | 'Nuxt.js' | 'Dart' | 'Flutter' | 'Figma' | 'Github' | 'Firebase Firestore' | 'Firebase Cloud Storage' | 'Firebase Cloud Function' | 'Firebase Authentication' | 'GCP' | 'AWS' | 'TailwindCSS' | 'Node.js' | 'HTML' | 'CSS' | 'styled-jsx' | 'microCMS' | 'Express' | 'NestJS' | 'Apollo' | 'GraphQL' | 'Heroku' | 'Vercel' | 'Redux' | 'Recoil' | 'Go' | 'MySQL' | 'Docker')[]
+  skill?: ('TypeScript' | 'JavaScript' | 'Python' | 'C' | 'Java' | 'C++' | 'React' | 'Vue.js' | 'Svelte' | 'Angular' | 'Next.js' | 'Nuxt.js' | 'Dart' | 'Flutter' | 'Figma' | 'Github' | 'Firebase Firestore' | 'Firebase Cloud Storage' | 'Firebase Cloud Function' | 'Firebase Authentication' | 'GCP' | 'AWS' | 'TailwindCSS' | 'Node.js' | 'HTML' | 'CSS' | 'styled-jsx' | 'microCMS' | 'Express' | 'NestJS' | 'Apollo' | 'GraphQL' | 'Heroku' | 'Vercel' | 'Redux' | 'Recoil' | 'Go' | 'MySQL' | 'Docker' | 'Agora')[]
   /**
    * 画像
    */
