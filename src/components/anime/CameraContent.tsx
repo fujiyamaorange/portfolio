@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import { profile } from '@/types/cms-types'
 
 type Props = {
