@@ -22,7 +22,12 @@ export const WorksList: React.VFC<Props> = (props) => {
               }
             )}
           >
-            <NextImage src={work.image.url} width={320} height={180} />
+            <NextImage
+              src={work.image.url}
+              width={320}
+              height={180}
+              alt="work image"
+            />
             <div className="md:w-[420px] sm:w-[360px] px-8 pb-4">
               <h3 className="mb-4 text-xl font-semibold">{work.title}</h3>
               <div
@@ -30,27 +35,51 @@ export const WorksList: React.VFC<Props> = (props) => {
                 className="mb-8 text-base"
               />
               <div className="flex space-x-4">
-                <Image src="/calendar-alt.svg" width="24" height="24" />
+                <Image
+                  src="/calendar-alt.svg"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                  alt="calendar"
+                />
                 <p className="text-base">{work.period}</p>
               </div>
               <div className="flex space-x-4">
-                <Image src="/users-alt.svg" width="24" height="24" />
+                <Image
+                  src="/users-alt.svg"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                  alt="people"
+                />
                 <p className="text-base">{work.people}</p>
               </div>
               <div className="flex space-x-4">
-                <Image src="/award.svg" width="24" height="24" />
+                <Image
+                  src="/award.svg"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                  alt="role"
+                />
                 <p className="text-base">{work.role}</p>
               </div>
               <div className="flex space-x-4">
-                <Image src="/wrench.svg" width="24" height="24" />
+                <Image
+                  src="/wrench.svg"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                  alt="skill"
+                />
                 {/* TODO */}
-                <p>
+                <div>
                   {work.skill.map((skill: SKILL) => (
                     <p key={skill} className="text-base">
                       {skill}
                     </p>
                   ))}
-                </p>
+                </div>
               </div>
             </div>
           </div>

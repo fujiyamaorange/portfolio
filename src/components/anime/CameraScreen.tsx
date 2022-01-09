@@ -20,9 +20,27 @@ export const CameraScreen: React.FC<Props> = ({
           <li className="w-32 mr-4 text-center">ポートレート</li>
         </ul>
         <div className="flex items-center justify-between mx-4 my-4">
-          <Image src="/image.svg" height="48" width="48" />
-          <Image src="/record-audio-thin.svg" height="64" width="64" />
-          <Image src="/camera.svg" height="48" width="48" />
+          <Image
+            src="/image.svg"
+            height="48"
+            width="48"
+            aria-hidden="true"
+            alt="image store"
+          />
+          <Image
+            src="/record-audio-thin.svg"
+            height="64"
+            width="64"
+            aria-hidden="true"
+            alt="record button"
+          />
+          <Image
+            src="/camera.svg"
+            height="48"
+            width="48"
+            aria-hidden="true"
+            alt="camera"
+          />
         </div>
       </div>
     </div>
