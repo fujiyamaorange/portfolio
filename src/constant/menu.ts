@@ -12,8 +12,4 @@ export const menus: MENU[] = [
     name: 'Works',
     url: '/works',
   },
-  {
-    name: 'Contact',
-    url: '/contact',
-  },
 ]
