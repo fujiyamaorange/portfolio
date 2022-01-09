@@ -7,6 +7,7 @@ import { Div100vh } from '@/components/basic/Div100vh'
 import { Terminal } from '@/components/anime/Terminal'
 import useMedia from '@/hooks/useMedia'
 import { CameraScreen } from '@/components/anime/CameraScreen'
+import { CameraContent } from '@/components/anime/CameraContent'
 
 type Props = { data: profile }
 
@@ -58,7 +59,7 @@ export const MySelf: React.VFC<Props> = (props) => {
       <section>
         {isUnder540 ? (
           <CameraScreen>
-            <h1>this is camera screen section</h1>
+            <CameraContent data={props.data} />
           </CameraScreen>
         ) : (
           <Terminal data={props.data} />
