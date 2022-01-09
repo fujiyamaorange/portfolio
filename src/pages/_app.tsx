@@ -52,12 +52,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           cardType: 'summary',
         }}
       />
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
