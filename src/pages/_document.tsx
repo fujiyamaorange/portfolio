@@ -15,6 +15,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ja">
         <title>FujiyamaOrange</title>
+        {/* https://github.com/vercel/next.js/discussions/12290 */}
         <Head />
         <body>
           <Main />

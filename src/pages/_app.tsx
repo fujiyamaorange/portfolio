@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 import { NextSeo } from 'next-seo'
 
 import '../styles/globals.css'
@@ -51,6 +52,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           cardType: 'summary',
         }}
       />
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
