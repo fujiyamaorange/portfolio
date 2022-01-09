@@ -10,7 +10,7 @@ type SKILL = Pick<works, 'skill'>['skill'][number]
 export const WorksList: React.VFC<Props> = (props) => {
   console.log(props.data)
   return (
-    <main className="absolute w-screen px-8 text-white top-16">
+    <main className="absolute w-screen px-8 pt-8 text-white top-16">
       <section className="flex flex-col justify-center">
         {props.data.map((work: works, i: number) => (
           <div
@@ -23,7 +23,7 @@ export const WorksList: React.VFC<Props> = (props) => {
             )}
           >
             <NextImage src={work.image.url} width={320} height={180} />
-            <div className="md:w-[420px] sm:w-[360px] px-8 py-4">
+            <div className="md:w-[420px] sm:w-[360px] px-8 pb-4">
               <h3 className="mb-4 text-xl font-semibold">{work.title}</h3>
               <div
                 dangerouslySetInnerHTML={{ __html: work.explanation }}
