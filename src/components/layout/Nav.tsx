@@ -25,10 +25,17 @@ export const Nav: React.VFC = () => {
             width={32}
             height={32}
             alt="github"
+            className="w-8 h-8 hover:animate-spin"
           />
         </a>
         <a target="_blank" href="https://zenn.dev/fujiyama">
-          <NextImage src="/zennwhite.svg" width={32} height={32} alt="zenn" />
+          <NextImage
+            src="/zennwhite.svg"
+            width={32}
+            height={32}
+            alt="zenn"
+            className="w-8 h-8 hover:animate-tada"
+          />
         </a>
       </div>
       <ul className="flex">
@@ -36,7 +43,7 @@ export const Nav: React.VFC = () => {
           <li key={menu.name}>
             <button
               onClick={(e) => handleClick(e, menu.url)}
-              className="px-2 py-2 transition duration-150 hover:text-gray-300"
+              className="px-2 py-2 transition duration-300 hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500"
             >
               {menu.name}
             </button>
