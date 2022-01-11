@@ -7,7 +7,7 @@ type Props = {
 export const CameraContent: React.VFC<Props> = ({ data }) => {
   const { name, introduce, hobby } = data
   return (
-    <div className="mx-auto mb-4 space-y-4 text-xl text-center w-max">
+    <div className="mx-auto my-4 space-y-4 text-xl text-center w-max">
       <h2>{name}</h2>
       <div dangerouslySetInnerHTML={{ __html: introduce }} />
       <h2>{hobby}</h2>
