@@ -60,9 +60,21 @@
   background: rgba(56, 4, 40, 0.8);
   font-family: 'Ubuntu Mono';
   height: calc(100% - 30px);
-  padding-top: 2px;
+  padding-top: 0px;
+  padding-bottom: 8px;
   margin-top: -1px;
+  overflow-y: scroll;
+  /* Microsoft Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
 }
+
+.terminal__body::-webkit-scrollbar {
+  /* Google Chrome, Safari */
+  display: none;
+}
+
 .terminal__prompt {
   display: flex;
 }
