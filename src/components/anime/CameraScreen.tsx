@@ -15,7 +15,7 @@ export const CameraScreen: React.FC<Props> = ({
         <div
           className={clsx(
             className,
-            'camera-bg min-h-[360px] flex items-center'
+            'camera-bg min-h-[360px] flex items-center bg-cover bg-no-repeat bg-center'
           )}
           {...others}
         >
