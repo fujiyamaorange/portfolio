@@ -21,6 +21,26 @@ export const CameraScreen: React.FC<Props> = ({
         >
           {children}
         </div>
+
+        {/* <div className="relative min-h-[360px] flex items-center">
+          <div
+            className={clsx(
+              className,
+              'absolute bg-cover bg-no-repeat bg-center min-h-[360px]'
+            )}
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              src="/tokyo.mp4"
+              poster="/tokyo.gif"
+              height="360"
+            />
+          </div>
+          <div className="absolute -translate-x-1/2 left-1/2">{children}</div>
+        </div> */}
         <div className="flex flex-col bg-black">
           <ul className="flex justify-between mt-4">
             <li className="w-32 ml-4 text-center">ビデオ</li>
@@ -55,9 +75,6 @@ export const CameraScreen: React.FC<Props> = ({
       <style jsx>{`
         .camera-bg {
           background-image: url('/tokyo.gif');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
       `}</style>
     </>
