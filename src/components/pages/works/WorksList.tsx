@@ -14,12 +14,10 @@ export const WorksList: React.VFC<Props> = (props) => {
         {props.data.map((work: works, i: number) => (
           <div
             key={work.id}
-            className={clsx(
-              'flex flex-col mb-8 text-white mx-auto sm:flex-row',
-              {
-                'sm:flex-row-reverse': i % 2 == 1,
-              }
-            )}
+            className={clsx('flex flex-col mb-8 text-white mx-auto', {
+              'sm:flex-row-reverse animate-slidein-from-right': i % 2 == 1,
+              'sm:flex-row animate-slidein-from-left': i % 2 == 0,
+            })}
           >
             <NextImage
               src={work.image.url}
