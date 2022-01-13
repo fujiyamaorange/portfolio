@@ -21,8 +21,11 @@ export const WorksList: React.VFC<Props> = (props) => {
           >
             <NextImage
               src={work.image.url}
-              width={320}
-              height={180}
+              width={work.image.width}
+              height={work.image.height}
+              className="max-w-[420px]"
+              // width={320}
+              // height={180}
               alt="work image"
             />
             <div className="md:w-[420px] sm:w-[360px] px-8 pb-4">
