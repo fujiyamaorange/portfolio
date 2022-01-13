@@ -55,23 +55,27 @@ export const WorksList: React.VFC<Props> = (props) => {
                 <p className="text-base">{work.people}</p>
               </div>
               <div className="flex space-x-4">
-                <Image
-                  src="/award.svg"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="role"
-                />
+                <div>
+                  <Image
+                    src="/award.svg"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                    alt="role"
+                  />
+                </div>
                 <p className="text-base">{work.role}</p>
               </div>
               <div className="flex space-x-4">
-                <Image
-                  src="/wrench.svg"
-                  width="24"
-                  height="24"
-                  aria-hidden="true"
-                  alt="skill"
-                />
+                <div>
+                  <Image
+                    src="/wrench.svg"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                    alt="skill"
+                  />
+                </div>
                 {/* TODO */}
                 <div>
                   {work.skill.map((skill: SKILL) => (
