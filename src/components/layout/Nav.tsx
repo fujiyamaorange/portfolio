@@ -21,7 +21,7 @@ export const Nav: React.VFC = () => {
         {/* https://github.com/vercel/next.js/issues/18585 */}
         <a
           target="_blank"
-          href="https://github.com/FujimuraKaito"
+          href="https://github.com/fujiyamaorange"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
           <NextImage
