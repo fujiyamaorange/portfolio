@@ -27,14 +27,7 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 }
 
 const Home: NextPage<Props> = (props) => {
-  return (
-    <>
-      <head>
-        <link rel="canonical" href="https://fujiyamaorange.vercel.app" />
-      </head>
-      <MySelf data={props.data} />
-    </>
-  )
+  return <MySelf data={props.data} />
 }
 
 export default Home
