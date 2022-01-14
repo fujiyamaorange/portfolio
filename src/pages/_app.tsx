@@ -52,6 +52,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           cardType: 'summary',
         }}
       />
+      <Head>
+        <link rel="canonical" href="https://fujiyamaorange.vercel.app" />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
