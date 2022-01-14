@@ -3,6 +3,7 @@ import type {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
+import Head from 'next/head'
 
 import { WorksList } from '@/components/pages/works/WorksList'
 import { getWorks } from '@/libs/microCMS/getWorks'
@@ -27,7 +28,14 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 }
 
 const Works: NextPage<Props> = (props) => {
-  return <WorksList data={props.data} />
+  return (
+    <>
+      <Head>
+        <link rel="canonical" href="https://fujiyamaorange.vercel.app/works" />
+      </Head>
+      <WorksList data={props.data} />
+    </>
+  )
 }
 
 export default Works

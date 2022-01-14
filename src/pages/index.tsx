@@ -3,6 +3,7 @@ import type {
   InferGetStaticPropsType,
   GetStaticPropsContext,
 } from 'next'
+import Head from 'next/head'
 
 import { getProfile } from '@/libs/microCMS/getProfile'
 import { MySelf } from '@/components/pages/index/MySelf'
@@ -27,7 +28,14 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 }
 
 const Home: NextPage<Props> = (props) => {
-  return <MySelf data={props.data} />
+  return (
+    <>
+      <Head>
+        <link rel="canonical" href="https://fujiyamaorange.vercel.app" />
+      </Head>
+      <MySelf data={props.data} />
+    </>
+  )
 }
 
 export default Home
