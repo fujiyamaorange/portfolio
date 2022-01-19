@@ -1,5 +1,5 @@
-import type { DocumentContext, DocumentInitialProps } from 'next/document'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import type { DocumentContext, DocumentInitialProps } from 'next/document'
 
 /**
  * サーバーサイドでのみ使用

@@ -1,16 +1,11 @@
-import type {
-  NextPage,
-  GetStaticPropsContext,
-  InferGetStaticPropsType,
-} from 'next'
-
 import { WorksList } from '@/components/pages/works/WorksList'
 import { getWorks } from '@/libs/microCMS/getWorks'
 
+import type { NextPage, InferGetStaticPropsType } from 'next'
+
 type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-export const getStaticProps = async (context: GetStaticPropsContext) => {
-  console.log('ビルド時に実行：WORKS')
+export const getStaticProps = async () => {
   const res = await getWorks()
   if (res.status === 200) {
     console.log('🍊')
