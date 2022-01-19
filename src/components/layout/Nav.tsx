@@ -21,6 +21,7 @@ export const Nav: React.VFC = () => {
         {/* https://github.com/vercel/next.js/issues/18585 */}
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/fujiyamaorange"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
@@ -34,6 +35,7 @@ export const Nav: React.VFC = () => {
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://zenn.dev/fujiyama"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
