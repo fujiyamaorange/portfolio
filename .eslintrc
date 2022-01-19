@@ -6,17 +6,13 @@
     "node": true
   },
   "extends": [
-    "eslint",
+    "eslint:recommended",
+    "next",
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "standard",
     "prettier"
   ],
-  // TSを使用する場合は以下を追加
   "parser": "@typescript-eslint/parser",
-  // パーサーの設定
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -24,12 +20,12 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  // プラグイン
-  "plugins": ["react", "@typescript-eslint", "react-hooks"],
-  // 個別対応のルール
+  "plugins": ["@typescript-eslint"],
   "rules": {
     "quotes": ["warn", "single"],
     "react/react-in-jsx-scope": "off",
-    "no-use-before-define": "warn"
+    "prefer-arrow-callback": "warn",
+    "@typescript-eslint/ban-types": "warn",
+    "import/order": ["warn", {"groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"]}]
   }
 }
