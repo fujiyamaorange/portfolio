@@ -46,6 +46,17 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           site: '@site',
           cardType: 'summary',
         }}
+        additionalLinkTags={[
+          {
+            rel: 'icon',
+            href: 'https://user-images.githubusercontent.com/63333564/148645636-a73c4d97-a417-4eb7-9606-4313102f9d6e.png',
+          },
+          {
+            rel: 'apple-touch-icon',
+            href: 'https://user-images.githubusercontent.com/63333564/148645636-a73c4d97-a417-4eb7-9606-4313102f9d6e.png',
+            sizes: '76x76',
+          },
+        ]}
       />
       <Layout>
         <Component {...pageProps} />
