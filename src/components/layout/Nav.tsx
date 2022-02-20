@@ -11,7 +11,6 @@ export const Nav: React.VFC = () => {
     path: string
   ) => {
     e.preventDefault()
-
     router.push(path)
   }
 
@@ -23,6 +22,7 @@ export const Nav: React.VFC = () => {
           target="_blank"
           rel="noreferrer"
           href="https://github.com/fujiyamaorange"
+          title="Github"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
           <NextImage
@@ -37,6 +37,7 @@ export const Nav: React.VFC = () => {
           target="_blank"
           rel="noreferrer"
           href="https://zenn.dev/fujiyama"
+          title="Zenn"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
           <NextImage
@@ -44,7 +45,7 @@ export const Nav: React.VFC = () => {
             width={32}
             height={32}
             alt="zenn"
-            className="w-8 h-8 hover:animate-tada"
+            className="w-8 h-8"
           />
         </a>
       </div>
@@ -52,6 +53,9 @@ export const Nav: React.VFC = () => {
         {menus.map((menu: MENU) => (
           <li key={menu.name}>
             <button
+              type="button"
+              role="link"
+              title={menu.name}
               onClick={(e) => handleClick(e, menu.url)}
               className="px-2 py-2 transition duration-300 rounded-md hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-white"
             >
