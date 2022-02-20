@@ -23,6 +23,7 @@ export const Nav: React.VFC = () => {
           rel="noreferrer"
           href="https://github.com/fujiyamaorange"
           title="Github"
+          aria-label="Github Link"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
           <NextImage
@@ -38,6 +39,7 @@ export const Nav: React.VFC = () => {
           rel="noreferrer"
           href="https://zenn.dev/fujiyama"
           title="Zenn"
+          aria-label="Zenn Link"
           className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
         >
           <NextImage
@@ -55,6 +57,7 @@ export const Nav: React.VFC = () => {
             <button
               type="button"
               role="link"
+              aria-label={menu.name + 'Link'}
               title={menu.name}
               onClick={(e) => handleClick(e, menu.url)}
               className="px-2 py-2 transition duration-300 rounded-md hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-white"
