@@ -20,19 +20,6 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-/**
-
-#cursor {
-  height: 50px;
-  width: 50px;
-  background: #e7c82f;
-  opacity: 50%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  display: none;
-}
-*/
 a,
 button {
   cursor: url('/cursor20.png'), auto;
