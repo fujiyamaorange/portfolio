@@ -14,7 +14,7 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
   }
 
   return (
-    <main className={styles.container}>
+    <main className={clsx(styles.container, 'selection:bg-transparent')}>
       <div className={styles.terminal}>
         <section className={styles.terminal__bar}>
           <div className={styles.bar__buttons}>
