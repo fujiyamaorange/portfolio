@@ -7,12 +7,6 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export const getStaticProps = async () => {
   const res = await getProfile()
-  if (res.status === 200) {
-    console.log('🍊')
-  } else {
-    // エラー
-    console.log('💣')
-  }
 
   return {
     props: {
