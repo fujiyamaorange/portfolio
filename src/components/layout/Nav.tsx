@@ -24,7 +24,7 @@ export const Nav: React.VFC = () => {
           href="https://github.com/fujiyamaorange"
           title="Github"
           aria-label="Github Link"
-          className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+          className="rounded-md focus:outline-none focus:ring-2 focus:ring-white selection:bg-transparent"
         >
           <NextImage
             src="/GitHub64pxWhite.png"
@@ -40,7 +40,7 @@ export const Nav: React.VFC = () => {
           href="https://zenn.dev/fujiyama"
           title="Zenn"
           aria-label="Zenn Link"
-          className="rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+          className="rounded-md focus:outline-none focus:ring-2 focus:ring-white selection:bg-transparent"
         >
           <NextImage
             src="/zennwhite.svg"
@@ -60,7 +60,7 @@ export const Nav: React.VFC = () => {
               aria-label={menu.name + 'Link'}
               title={menu.name}
               onClick={(e) => handleClick(e, menu.url)}
-              className="px-2 py-2 transition duration-300 rounded-md hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-white"
+              className="px-2 py-2 transition duration-300 rounded-md hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-white selection:bg-white selection:text-black"
             >
               {menu.name}
             </button>
