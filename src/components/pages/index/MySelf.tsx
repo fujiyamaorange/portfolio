@@ -46,7 +46,7 @@ export const MySelf: React.VFC<Props> = (props) => {
           ref={el}
         />
       </Div100vh>
-      <section className="flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center selection:bg-transparent">
         <Image
           src={image.url}
           width={image.width}
@@ -55,7 +55,9 @@ export const MySelf: React.VFC<Props> = (props) => {
           aria-hidden="true"
           alt="user icon"
         />
-        <span className="mt-4 font-semibold">{name}</span>
+        <span className="mt-4 font-semibold selection:bg-white selection:text-black">
+          {name}
+        </span>
       </section>
       <section>
         {isUnder540 ? (
