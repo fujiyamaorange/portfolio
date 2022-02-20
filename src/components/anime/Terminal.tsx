@@ -9,12 +9,19 @@ type Props = {
 export const Terminal: React.VFC<Props> = ({ data }) => {
   const { name, introduce, hobby } = data
 
+  const onCloseClick = () => {
+    alert('NICE!!')
+  }
+
   return (
     <main className={styles.container}>
       <div className={styles.terminal}>
         <section className={styles.terminal__bar}>
           <div className={styles.bar__buttons}>
             <button
+              tabIndex={-1}
+              type="button"
+              onClick={onCloseClick}
               className={clsx(styles.bar__button, styles.bar__button__exit)}
             >
               &#10005;
@@ -46,10 +53,7 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
             <p>{hobby}</p>
-            <span
-              aria-hidden
-              className={styles.terminal__prompt__cursor}
-            ></span>
+            <span className={styles.terminal__prompt__cursor}></span>
           </div>
         </section>
       </div>
