@@ -23,7 +23,7 @@ export const WorksList: React.VFC<Props> = (props) => {
               src={work.image.url}
               width={work.image.width}
               height={work.image.height}
-              className="max-w-[420px]"
+              className="max-w-[420px] selection:bg-transparent"
               // width={320}
               // height={180}
               alt="work image"
@@ -36,7 +36,7 @@ export const WorksList: React.VFC<Props> = (props) => {
                 dangerouslySetInnerHTML={{ __html: work.explanation }}
                 className="mb-8 text-base selection:text-black selection:bg-white"
               />
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 selection:bg-transparent">
                 <Image
                   src="/calendar-alt.svg"
                   width="24"
@@ -48,7 +48,7 @@ export const WorksList: React.VFC<Props> = (props) => {
                   {work.period}
                 </p>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 selection:bg-transparent">
                 <Image
                   src="/users-alt.svg"
                   width="24"
@@ -60,7 +60,7 @@ export const WorksList: React.VFC<Props> = (props) => {
                   {work.people}
                 </p>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 selection:bg-transparent">
                 <div>
                   <Image
                     src="/award.svg"
@@ -74,7 +74,7 @@ export const WorksList: React.VFC<Props> = (props) => {
                   {work.role}
                 </p>
               </div>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 selection:bg-transparent">
                 <div>
                   <Image
                     src="/wrench.svg"
