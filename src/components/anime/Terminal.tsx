@@ -19,8 +19,12 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             >
               &#10005;
             </button>
-            <button className={styles.bar__button}>&#9472;</button>
-            <button className={styles.bar__button}>&#9723;</button>
+            <button disabled className={styles.bar__button}>
+              &#9472;
+            </button>
+            <button disabled className={styles.bar__button}>
+              &#9723;
+            </button>
           </div>
           <p className={styles.bar__user}>user@ubuntu: ~</p>
         </section>
@@ -42,7 +46,10 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
             <p>{hobby}</p>
-            <span className={styles.terminal__prompt__cursor}></span>
+            <span
+              aria-hidden
+              className={styles.terminal__prompt__cursor}
+            ></span>
           </div>
         </section>
       </div>
