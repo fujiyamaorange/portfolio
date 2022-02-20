@@ -29,10 +29,12 @@ export const WorksList: React.VFC<Props> = (props) => {
               alt="work image"
             />
             <div className="md:w-[420px] sm:w-[360px] px-8 pb-4">
-              <h3 className="mb-4 text-xl font-semibold">{work.title}</h3>
+              <h3 className="mb-4 text-xl font-semibold selection:text-black selection:bg-white">
+                {work.title}
+              </h3>
               <div
                 dangerouslySetInnerHTML={{ __html: work.explanation }}
-                className="mb-8 text-base"
+                className="mb-8 text-base selection:text-black selection:bg-white"
               />
               <div className="flex space-x-4">
                 <Image
@@ -42,7 +44,9 @@ export const WorksList: React.VFC<Props> = (props) => {
                   aria-hidden="true"
                   alt="calendar"
                 />
-                <p className="text-base">{work.period}</p>
+                <p className="text-base selection:text-black selection:bg-white">
+                  {work.period}
+                </p>
               </div>
               <div className="flex space-x-4">
                 <Image
@@ -52,7 +56,9 @@ export const WorksList: React.VFC<Props> = (props) => {
                   aria-hidden="true"
                   alt="people"
                 />
-                <p className="text-base">{work.people}</p>
+                <p className="text-base selection:text-black selection:bg-white">
+                  {work.people}
+                </p>
               </div>
               <div className="flex space-x-4">
                 <div>
@@ -64,7 +70,9 @@ export const WorksList: React.VFC<Props> = (props) => {
                     alt="role"
                   />
                 </div>
-                <p className="text-base">{work.role}</p>
+                <p className="text-base selection:text-black selection:bg-white">
+                  {work.role}
+                </p>
               </div>
               <div className="flex space-x-4">
                 <div>
@@ -76,10 +84,12 @@ export const WorksList: React.VFC<Props> = (props) => {
                     alt="skill"
                   />
                 </div>
-                {/* TODO */}
                 <div>
                   {work.skill.map((skill: SKILL) => (
-                    <p key={skill} className="text-base">
+                    <p
+                      key={skill}
+                      className="text-base selection:text-black selection:bg-white"
+                    >
                       {skill}
                     </p>
                   ))}
