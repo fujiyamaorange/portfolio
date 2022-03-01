@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import anime from 'animejs'
 import clsx from 'clsx'
 
-import styles from '@/styles/ShootingStartsStyle.module.css'
 import { on } from '@/utils/on'
 import { off } from '@/utils/off'
+import styles from '@/styles/ShootingStartsStyle.module.css'
 
 export const ShootingStars = () => {
   const isBrowser = typeof window !== 'undefined'
