@@ -16,8 +16,7 @@ export const MySelf: React.VFC<Props> = (props) => {
 
   const isUnder540 = useMedia('(max-width: 540px)')
 
-  const el = useRef(null!)
-  const typed = useRef<Typed>(null!)
+  const el = useRef(null)
 
   useEffect(() => {
     const options = {
@@ -31,10 +30,10 @@ export const MySelf: React.VFC<Props> = (props) => {
       loop: true,
     }
 
-    typed.current = new Typed(el.current, options)
+    const typed = new Typed(el.current ?? '', options)
 
     return () => {
-      typed.current.destroy()
+      typed.destroy()
     }
   }, [])
 
