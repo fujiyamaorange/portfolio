@@ -1,0 +1,23 @@
+name: get zenn articles
+
+on:
+  schedule:
+    # 毎日12時に実行
+    - cron: '0 3 * * *'
+
+jobs:
+  build:
+    name: get articles
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '16'
+      - run: yarn install
+      - name: build posts
+        run: |
+          yarn build:posts
+      - name: export portfolio
+        run: |
+          yarn export
