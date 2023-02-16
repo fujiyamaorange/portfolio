@@ -18,6 +18,6 @@ jobs:
       - name: build posts
         run: |
           yarn build:posts
-      - name: export portfolio
+      - name: build portfolio
         run: |
-          yarn export
+          yarn build
