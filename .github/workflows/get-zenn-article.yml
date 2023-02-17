@@ -18,6 +18,3 @@ jobs:
       - name: build posts
         run: |
           yarn build:posts
-      - name: build portfolio
-        run: |
-          yarn build
