@@ -1876,10 +1876,10 @@ merge2@^1.3.0, merge2@^1.4.1:
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
   integrity sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==
 
-microcms-typescript@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/microcms-typescript/-/microcms-typescript-1.0.10.tgz#d3df2afd2833c10a92c9561aea58d35b3edb8635"
-  integrity sha512-1XA/cjL6uzIF7NGTvZI4K6uAxZ1UO8BGl72U/6kto59vdE64SjW7ruZCzMW7x/Ze8VxWDYORxms9qvSWpao5iw==
+microcms-typescript@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/microcms-typescript/-/microcms-typescript-1.0.14.tgz#6d6cc081999beebfb0712ca00e990c2fc1b5a103"
+  integrity sha512-fQMohVQ8mpeULTVuaUrn2uzFV2jYL0Tgi+09WgSE9deu9RiDo2l9MFh/PsKsCirc4NLxFAImmb1OxVjCu/nEPg==
 
 micromatch@^4.0.4:
   version "4.0.5"
