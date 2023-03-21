@@ -11,12 +11,15 @@ type DATA = {
 
 export const getWorks = async (): Promise<AxiosResponse<DATA, any>> => {
   try {
-    const res: AxiosResponse<DATA, any> = await axios.get(`${ENDPOINT}/works`, {
-      headers: {
-        'Content-type': 'application/json',
-        'X-MICROCMS-API-KEY': WORKS_API_KEY,
-      },
-    })
+    const res: AxiosResponse<DATA, any> = await axios.get(
+      `${ENDPOINT}/works?limit=100`,
+      {
+        headers: {
+          'Content-type': 'application/json',
+          'X-MICROCMS-API-KEY': WORKS_API_KEY,
+        },
+      }
+    )
     return res
   } catch (e) {
     console.error(e)
