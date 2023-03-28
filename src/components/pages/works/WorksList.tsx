@@ -20,16 +20,7 @@ export const WorksList: React.VFC<Props> = (props) => {
               'sm:flex-row animate-slidein-from-left': i % 2 == 0,
             })}
           >
-            {/* <NextImage
-              src={work.image.url}
-              width={work.image.width}
-              height={work.image.height}
-              className="max-w-[420px] selection:bg-transparent"
-              // width={320}
-              // height={180}
-              alt="work image"
-            /> */}
-            <EagerImage
+            <NextImage
               src={work.image.url}
               width={work.image.width}
               height={work.image.height}
@@ -38,6 +29,15 @@ export const WorksList: React.VFC<Props> = (props) => {
               // height={180}
               alt="work image"
             />
+            {/* <EagerImage
+              src={work.image.url}
+              width={work.image.width}
+              height={work.image.height}
+              className="max-w-[420px] selection:bg-transparent"
+              // width={320}
+              // height={180}
+              alt="work image"
+            /> */}
             <div className="md:w-[420px] sm:w-[360px] px-8 pb-4">
               <h3 className="mb-4 text-xl font-semibold selection:text-black selection:bg-white">
                 {work.title}
