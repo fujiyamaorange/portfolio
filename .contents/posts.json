@@ -1,5 +1,14 @@
 [
   {
+    "title": "【Rust】SWCプラグインを作って得た学び",
+    "contentSnippet": "!Rust初学者であり，今回初めてSWCプラグインの作成に挑戦しました．内容が間違っているところもあるかもしれませんが，コメントで優しく教えていただけると嬉しいです．!こちらのツイートに以下のように書かれており，今後高速化のためにSWCのRust APIの仕様に変更があるかもしれません．Dear SWC users, we want to hear opinions about swc rust APIs. We want to make SWC faster, but having too many APIs exposed prevent optimizations l...",
+    "link": "https://zenn.dev/fujiyama/articles/0ae86dacc2c3b5",
+    "isoDate": "2023-03-21T22:30:00.000Z",
+    "dateMiliSeconds": 1679437800000,
+    "authorName": "Fujiyamaorange",
+    "authorId": "fujiyama"
+  },
+  {
     "title": "新卒入社前に達人プログラマーを読んだ",
     "contentSnippet": "はじめに4月から新卒エンジニアとして社会人になります．その前に「達人プログラマー」を読んでおこうと思い，手にとってみました．読んでいく中で自分の中で大切だと思った部分を抜き出して紹介していこうと思います．同じ新卒のエンジニアの方の参考になれば嬉しいです．!本に書いてある内容に加えて個人の解釈も含まれているのでそのあたりはご了承ください． 達人プログラマー 誰が本書を読むべきなのか？本書はより効率的，そしてより生産的なプログラマーになりたいと願う方々のためのものです．(中略)我々はすべて(あるいはほとんど)の答えを知っているとか，すべての状況に我々のアイデ...",
     "link": "https://zenn.dev/fujiyama/articles/9847c39cd090c7",
