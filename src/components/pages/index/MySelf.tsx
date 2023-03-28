@@ -22,7 +22,7 @@ export const MySelf: React.VFC<Props> = (props) => {
       strings: [
         '<span>Hello&sbquo;&ensp;</span>I&rsquo;m Fujimura Kaito.',
         'I live in Fukuoka&sbquo; Japan.',
-        'I&rsquo;m a university student.',
+        'I&rsquo;m a Web Developer.',
       ],
       typeSpeed: 100,
       backSpeed: 30,
