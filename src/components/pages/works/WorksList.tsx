@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 import { works } from '@/types/cms-types'
 import { NextImage } from '@/components/basic/NextImage'
+import { EagerImage } from '@/components/basic/EagerImage'
 
 type Props = { data: works[] }
 type SKILL = Pick<works, 'skill'>['skill'][number]
@@ -28,6 +29,15 @@ export const WorksList: React.VFC<Props> = (props) => {
               // height={180}
               alt="work image"
             />
+            {/* <EagerImage
+              src={work.image.url}
+              width={work.image.width}
+              height={work.image.height}
+              className="max-w-[420px] selection:bg-transparent"
+              // width={320}
+              // height={180}
+              alt="work image"
+            /> */}
             <div className="md:w-[420px] sm:w-[360px] px-8 pb-4">
               <h3 className="mb-4 text-xl font-semibold selection:text-black selection:bg-white">
                 {work.title}
