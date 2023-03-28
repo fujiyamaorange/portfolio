@@ -3,6 +3,7 @@ import clsx from 'clsx'
 
 import { works } from '@/types/cms-types'
 import { NextImage } from '@/components/basic/NextImage'
+import { EagerImage } from '@/components/basic/EagerImage'
 
 type Props = { data: works[] }
 type SKILL = Pick<works, 'skill'>['skill'][number]
@@ -19,7 +20,16 @@ export const WorksList: React.VFC<Props> = (props) => {
               'sm:flex-row animate-slidein-from-left': i % 2 == 0,
             })}
           >
-            <NextImage
+            {/* <NextImage
+              src={work.image.url}
+              width={work.image.width}
+              height={work.image.height}
+              className="max-w-[420px] selection:bg-transparent"
+              // width={320}
+              // height={180}
+              alt="work image"
+            /> */}
+            <EagerImage
               src={work.image.url}
               width={work.image.width}
               height={work.image.height}
