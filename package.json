@@ -12,7 +12,7 @@
     "cms-gen": "yarn microcms-typescript src/schema src/types/cms-types.ts"
   },
   "dependencies": {
-    "@types/animejs": "^3.1.4",
+    "@types/animejs": "^3.1.7",
     "animejs": "^3.2.1",
     "axios": "^0.24.0",
     "clsx": "^1.2.1",
