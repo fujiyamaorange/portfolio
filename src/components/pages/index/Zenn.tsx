@@ -27,19 +27,27 @@ export const Zenn = (props: Props) => {
             className="px-8 py-4 transition duration-150 hover:scale-110 bg-slate-800 hover:bg-slate-700"
             onClick={() => jumpLink(article.link)}
           >
-            <div>
-              <div className="flex items-center gap-4 mb-4">
-                <Image
-                  src="/user-icon-howl.png"
-                  width="30"
-                  height="30"
-                  className="rounded-full"
-                  aria-hidden="true"
-                  alt="user icon"
-                />
-                <p>{article.authorName}</p>
+            <div className="sm:flex sm:flex-col sm:justify-between sm:h-full">
+              <div>
+                <div className="flex items-center gap-4 mb-4">
+                  <Image
+                    src="/user-icon-howl.png"
+                    width="30"
+                    height="30"
+                    className="rounded-full"
+                    aria-hidden="true"
+                    alt="user icon"
+                  />
+                  <p>{article.authorName}</p>
+                </div>
+                <h2 className="font-semibold">{article.title}</h2>
+                <p className="hidden mt-4 text-sm text-gray-400 sm:block">
+                  {article.contentSnippet?.substring(0, 80)}...
+                </p>
               </div>
-              <h2 className="font-semibold">{article.title}</h2>
+              <p className="text-sm text-gray-400 text-end">
+                {article.isoDate?.split('T')[0]}
+              </p>
             </div>
           </article>
         ))}

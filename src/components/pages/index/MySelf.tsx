@@ -10,7 +10,7 @@ import { CameraContent } from '@/components/anime/CameraContent'
 
 type Props = { data: profile }
 
-export const MySelf: React.VFC<Props> = (props) => {
+export const MySelf = (props: Props) => {
   const { name, image } = props.data
 
   const isUnder540 = useMedia('(max-width: 540px)')
