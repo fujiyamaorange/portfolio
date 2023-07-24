@@ -37,7 +37,7 @@
     "eslint-plugin-import": "^2.25.4",
     "fs-extra": "^11.1.0",
     "microcms-typescript": "^1.0.14",
-    "postcss": "^8.4.18",
+    "postcss": "^8.4.27",
     "prettier": "^2.5.1",
     "rss-parser": "^3.12.0",
     "serve": "^14.2.0",
