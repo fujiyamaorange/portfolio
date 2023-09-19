@@ -74,23 +74,23 @@ T,
 
 export interface EndPoints {
   get: {
-    works: works<'get'>
-    profile: profile<'get'>
+    'works': works<'get'>
+    'profile': profile<'get'>
   }
   gets: {
-    works: works<'gets'>
-    profile: profile<'gets'>
+    'works': works<'gets'>
+    'profile': profile<'gets'>
   }
   post: {
-    works: works<'post'>
-    profile: profile<'post'>
+    'works': works<'post'>
+    'profile': profile<'post'>
   }
   put: {
-    works: works<'put'>
-    profile: profile<'put'>
+    'works': works<'put'>
+    'profile': profile<'put'>
   }
   patch: {
-    works: works<'patch'>
-    profile: profile<'patch'>
+    'works': works<'patch'>
+    'profile': profile<'patch'>
   }
 }
