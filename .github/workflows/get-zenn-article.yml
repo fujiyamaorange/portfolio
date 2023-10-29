@@ -4,17 +4,45 @@ on:
   schedule:
     # 毎日12時に実行
     - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
   build:
     name: get articles
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 20
       - run: yarn install
       - name: build posts
         run: |
           yarn build:posts
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff
+          git diff-index --quiet HEAD || echo "changes=yes" >> $GITHUB_ENV
+      - name: Commit and push if changed
+        if: env.changes == 'yes'
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add -A
+          git commit -m "Auto-update posts.json"
+          git push
+
+      - name: Create Pull Request
+        if: env.changes == 'yes'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: 'Auto-update posts.json'
+          title: 'Auto-update posts.json'
+          body: 'Automated changes by GitHub Actions'
+          labels: 'automerge'
