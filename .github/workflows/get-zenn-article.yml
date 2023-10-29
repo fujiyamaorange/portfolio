@@ -4,10 +4,6 @@ on:
   schedule:
     # 毎日12時に実行
     - cron: '0 3 * * *'
-  push:
-    branches:
-      - build-workflow
-  workflow_dispatch:
 
 permissions:
   contents: write
