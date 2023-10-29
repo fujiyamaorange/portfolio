@@ -5,16 +5,27 @@ on:
     # 毎日12時に実行
     - cron: '0 3 * * *'
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   build:
     name: get articles
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 20
       - run: yarn install
       - name: build posts
         run: |
           yarn build:posts
+
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: build zenn posts
+          delete-branch: false
+          title: Update zenn posts file
+          reviewers: fujiyamaorange
