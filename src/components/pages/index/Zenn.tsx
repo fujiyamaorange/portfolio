@@ -11,16 +11,14 @@ const jumpLink = (url: string) => {
 export const Zenn = (props: Props) => {
   const articles = props.articles
 
-  console.log(articles)
-
   return (
-    <main className="flex flex-col w-3/4 mx-auto mb-16 text-white sm:mb-48">
-      <section className="flex flex-col items-center justify-center selection:bg-transparent">
+    <section className="flex flex-col mx-4 sm:w-3/4 sm:mx-auto mb-16 text-white sm:mb-48">
+      <div className="flex flex-col items-center justify-center selection:bg-transparent">
         <span className="mt-4 mb-8 text-3xl font-semibold selection:bg-white selection:text-black">
           Zenn
         </span>
-      </section>
-      <section className="grid gap-2 sm:grid-cols-3 sm:gap-4">
+      </div>
+      <div className="grid gap-2 sm:grid-cols-3 sm:gap-4">
         {articles.map((article) => (
           <article
             key={article.link}
@@ -51,7 +49,7 @@ export const Zenn = (props: Props) => {
             </div>
           </article>
         ))}
-      </section>
-    </main>
+      </div>
+    </section>
   )
 }
