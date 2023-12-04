@@ -18,10 +18,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: yarn install
+      - run: pnpm install
       - name: build posts
         run: |
-          yarn build:posts
+          pnpm build:posts
 
       - uses: peter-evans/create-pull-request@v4
         with:
