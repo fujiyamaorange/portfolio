@@ -96,8 +96,9 @@ export const ShootingStars = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden bg-black">
-      <svg className={clsx(styles["sky"], "sky")}>
-        {[...Array(NUM)].map((_, y) => (
+      {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+      <svg className={clsx(styles.sky, "sky")}>
+        {[...Array(NUM)].map((k) => (
           <circle
             cx={getRandomX()}
             cy={getRandomY()}
@@ -105,16 +106,16 @@ export const ShootingStars = () => {
             stroke="none"
             strokeWidth="0"
             fill="white"
-            key={y}
+            key={k}
             className="star"
           />
         ))}
       </svg>
-      <div className={clsx(styles["shootingstars"], "shootingstars")}>
-        {[...Array(NUM)].map((_, y) => (
+      <div className={clsx(styles.shootingstars, "shootingstars")}>
+        {[...Array(NUM)].map((k) => (
           <div
-            key={y}
-            className={clsx(styles["wish"], "wish")}
+            key={k}
+            className={clsx(styles.wish, "wish")}
             style={{
               left: `${getRandomY()}px`,
               top: `${getRandomX()}px`,

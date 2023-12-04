@@ -1,14 +1,12 @@
-import clsx from "clsx";
-import Image from "next/image";
-
-import { EagerImage } from "@/components/basic/EagerImage";
 import { NextImage } from "@/components/basic/NextImage";
 import { works } from "@/types/cms-types";
+import clsx from "clsx";
+import Image from "next/image";
 
 type Props = { data: works[] };
 type SKILL = Pick<works, "skill">["skill"][number];
 
-export const WorksList: React.VFC<Props> = (props) => {
+export const WorksList = (props: Props) => {
   return (
     <main className="absolute w-screen px-8 pt-8 text-white top-16">
       <section className="flex flex-col justify-center">
@@ -43,6 +41,7 @@ export const WorksList: React.VFC<Props> = (props) => {
                 {work.title}
               </h3>
               <div
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
                 dangerouslySetInnerHTML={{ __html: work.explanation }}
                 className="mb-8 text-base selection:text-black selection:bg-white"
               />
