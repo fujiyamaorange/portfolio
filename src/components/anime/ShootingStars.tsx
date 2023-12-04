@@ -40,7 +40,7 @@ export const ShootingStars = () => {
     return () => {
       off(window, "resize", handler);
     };
-  }, []);
+  }, [isBrowser]);
 
   const starryNight = () => {
     anime({
@@ -57,7 +57,7 @@ export const ShootingStars = () => {
       ],
       easing: "linear",
       loop: true,
-      delay: (_: any, i: number) => 50 * i,
+      delay: (_, i: number) => 50 * i,
     });
   };
   const shootingStars = () => {
@@ -65,7 +65,7 @@ export const ShootingStars = () => {
       targets: [".shootingstars .wish"],
       easing: "linear",
       loop: true,
-      delay: (_: any, i: number) => 1000 * i,
+      delay: (_, i: number) => 1000 * i,
       opacity: [
         {
           duration: 700,
