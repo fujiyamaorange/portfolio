@@ -1,15 +1,15 @@
-import Image from 'next/image'
-import { profile } from '@/types/cms-types'
-import { PostItem } from '@/types/zenn'
+import { profile } from "@/types/cms-types";
+import { PostItem } from "@/types/zenn";
+import Image from "next/image";
 
-type Props = { data: profile; articles: PostItem[] }
+type Props = { data: profile; articles: PostItem[] };
 
 const jumpLink = (url: string) => {
-  window.open(url, '_blank')
-}
+  window.open(url, "_blank");
+};
 
 export const Zenn = (props: Props) => {
-  const articles = props.articles
+  const articles = props.articles;
 
   return (
     <section className="flex flex-col mx-4 sm:w-3/4 sm:mx-auto mb-16 text-white sm:mb-48">
@@ -44,12 +44,12 @@ export const Zenn = (props: Props) => {
                 </p>
               </div>
               <p className="text-sm text-gray-400 text-end">
-                {article.isoDate?.split('T')[0]}
+                {article.isoDate?.split("T")[0]}
               </p>
             </div>
           </article>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};

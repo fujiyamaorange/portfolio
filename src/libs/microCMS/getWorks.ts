@@ -1,13 +1,13 @@
-import axios, { AxiosResponse } from 'axios'
+import axios, { AxiosResponse } from "axios";
 
-import { works } from '@/types/cms-types'
+import { works } from "@/types/cms-types";
 
-const WORKS_API_KEY: string = process.env.WORKS_API_KEY || ''
-const ENDPOINT: string = process.env.ENDPOINT || ''
+const WORKS_API_KEY: string = process.env.WORKS_API_KEY || "";
+const ENDPOINT: string = process.env.ENDPOINT || "";
 
 type DATA = {
-  contents: works[]
-}
+  contents: works[];
+};
 
 export const getWorks = async (): Promise<AxiosResponse<DATA, any>> => {
   try {
@@ -15,14 +15,14 @@ export const getWorks = async (): Promise<AxiosResponse<DATA, any>> => {
       `${ENDPOINT}/works?limit=100`,
       {
         headers: {
-          'Content-type': 'application/json',
-          'X-MICROCMS-API-KEY': WORKS_API_KEY,
+          "Content-type": "application/json",
+          "X-MICROCMS-API-KEY": WORKS_API_KEY,
         },
-      }
-    )
-    return res
+      },
+    );
+    return res;
   } catch (e) {
-    console.error(e)
-    throw e
+    console.error(e);
+    throw e;
   }
-}
+};

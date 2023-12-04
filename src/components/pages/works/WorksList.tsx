@@ -1,12 +1,12 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import Image from "next/image";
+import clsx from "clsx";
 
-import { works } from '@/types/cms-types'
-import { NextImage } from '@/components/basic/NextImage'
-import { EagerImage } from '@/components/basic/EagerImage'
+import { works } from "@/types/cms-types";
+import { NextImage } from "@/components/basic/NextImage";
+import { EagerImage } from "@/components/basic/EagerImage";
 
-type Props = { data: works[] }
-type SKILL = Pick<works, 'skill'>['skill'][number]
+type Props = { data: works[] };
+type SKILL = Pick<works, "skill">["skill"][number];
 
 export const WorksList: React.VFC<Props> = (props) => {
   return (
@@ -15,9 +15,9 @@ export const WorksList: React.VFC<Props> = (props) => {
         {props.data.map((work: works, i: number) => (
           <div
             key={work.id}
-            className={clsx('flex flex-col mb-8 text-white mx-auto', {
-              'sm:flex-row-reverse animate-slidein-from-right': i % 2 == 1,
-              'sm:flex-row animate-slidein-from-left': i % 2 == 0,
+            className={clsx("flex flex-col mb-8 text-white mx-auto", {
+              "sm:flex-row-reverse animate-slidein-from-right": i % 2 == 1,
+              "sm:flex-row animate-slidein-from-left": i % 2 == 0,
             })}
           >
             <NextImage
@@ -110,5 +110,5 @@ export const WorksList: React.VFC<Props> = (props) => {
         ))}
       </section>
     </main>
-  )
-}
+  );
+};

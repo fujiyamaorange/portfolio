@@ -1,20 +1,20 @@
-import clsx from 'clsx'
-import styles from '@/styles/Terminal.module.css'
-import { profile } from '@/types/cms-types'
+import clsx from "clsx";
+import styles from "@/styles/Terminal.module.css";
+import { profile } from "@/types/cms-types";
 
 type Props = {
-  data: profile
-}
+  data: profile;
+};
 
 export const Terminal: React.VFC<Props> = ({ data }) => {
-  const { name, introduce, hobby } = data
+  const { name, introduce, hobby } = data;
 
   const onCloseClick = () => {
-    alert('NICE!!')
-  }
+    alert("NICE!!");
+  };
 
   return (
-    <main className={clsx(styles.container, 'selection:bg-transparent')}>
+    <main className={clsx(styles.container, "selection:bg-transparent")}>
       <div className={styles.terminal}>
         <section className={styles.terminal__bar}>
           <div className={styles.bar__buttons}>
@@ -58,5 +58,5 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
         </section>
       </div>
     </main>
-  )
-}
+  );
+};

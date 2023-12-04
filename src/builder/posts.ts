@@ -1,91 +1,90 @@
-import fs from 'fs-extra'
-import Parser from 'rss-parser'
-import { Member, PostItem } from '@/types/zenn'
-import { member } from '../constant/member'
+import { Member, PostItem } from "@/types/zenn";
+import fs from "fs-extra";
+import Parser from "rss-parser";
+import { member } from "../constant/member";
 
 type FeedItem = {
-  title: string
-  link: string
-  contentSnippet?: string
-  isoDate?: string
-  dateMiliSeconds: number
-}
+  title: string;
+  link: string;
+  contentSnippet?: string;
+  isoDate?: string;
+  dateMiliSeconds: number;
+};
 
 function isValidUrl(str: string): boolean {
   try {
-    const { protocol } = new URL(str)
-    return protocol === 'http:' || protocol === 'https:'
+    const { protocol } = new URL(str);
+    return protocol === "http:" || protocol === "https:";
   } catch {
-    return false
+    return false;
   }
 }
 
-const parser = new Parser()
-let allPostItems: PostItem[] = []
+const parser = new Parser();
+let allPostItems: PostItem[] = [];
 
 async function fetchFeedItems(url: string) {
-  const feed = await parser.parseURL(url)
-  if (!feed?.items?.length) return []
+  const feed = await parser.parseURL(url);
+  if (!feed?.items?.length) return [];
 
   // return item which has title and link
   return feed.items
     .map(({ title, contentSnippet, link, isoDate }) => {
       return {
         title,
-        contentSnippet: contentSnippet?.replace(/\n/g, ''),
+        contentSnippet: contentSnippet?.replace(/\n/g, ""),
         link,
         isoDate,
         dateMiliSeconds: isoDate ? new Date(isoDate).getTime() : 0,
-      }
+      };
     })
     .filter(
-      ({ title, link }) => title && link && isValidUrl(link)
-    ) as FeedItem[]
+      ({ title, link }) => title && link && isValidUrl(link),
+    ) as FeedItem[];
 }
 
 async function getFeedItemsFromSources(sources: undefined | string[]) {
-  if (!sources?.length) return []
-  let feedItems: FeedItem[] = []
+  if (!sources?.length) return [];
+  let feedItems: FeedItem[] = [];
   for (const url of sources) {
-    const items = await fetchFeedItems(url)
-    if (items) feedItems = [...feedItems, ...items]
+    const items = await fetchFeedItems(url);
+    if (items) feedItems = [...feedItems, ...items];
   }
-  return feedItems
+  return feedItems;
 }
 
 async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
-  const { id, sources, name, includeUrlRegex, excludeUrlRegex } = member
-  const feedItems = await getFeedItemsFromSources(sources)
-  if (!feedItems) return []
+  const { id, sources, name, includeUrlRegex, excludeUrlRegex } = member;
+  const feedItems = await getFeedItemsFromSources(sources);
+  if (!feedItems) return [];
 
   let postItems = feedItems.map((item) => {
     return {
       ...item,
       authorName: name,
       authorId: id,
-    }
-  })
+    };
+  });
   // remove items which not matches includeUrlRegex
   if (includeUrlRegex) {
     postItems = postItems.filter((item) => {
-      return item.link.match(new RegExp(includeUrlRegex))
-    })
+      return item.link.match(new RegExp(includeUrlRegex));
+    });
   }
   // remove items which matches excludeUrlRegex
   if (excludeUrlRegex) {
     postItems = postItems.filter((item) => {
-      return !item.link.match(new RegExp(excludeUrlRegex))
-    })
+      return !item.link.match(new RegExp(excludeUrlRegex));
+    });
   }
 
-  return postItems
+  return postItems;
 }
+(async () => {
+  const items = await getMemberFeedItems(member);
+  if (items) allPostItems = [...allPostItems, ...items];
 
-;(async function () {
-  const items = await getMemberFeedItems(member)
-  if (items) allPostItems = [...allPostItems, ...items]
-
-  allPostItems.sort((a, b) => b.dateMiliSeconds - a.dateMiliSeconds)
-  fs.ensureDirSync('.contents')
-  fs.writeJsonSync('.contents/posts.json', allPostItems)
-})()
+  allPostItems.sort((a, b) => b.dateMiliSeconds - a.dateMiliSeconds);
+  fs.ensureDirSync(".contents");
+  fs.writeJsonSync(".contents/posts.json", allPostItems);
+})();

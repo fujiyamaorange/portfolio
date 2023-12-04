@@ -1,4 +1,4 @@
-require('dotenv').config({ path: './.env.local' })
+require("dotenv").config({ path: "./.env.local" });
 
 /** @type {import('next').NextConfig} */
 module.exports = {
@@ -9,10 +9,10 @@ module.exports = {
     WORKS_API_KEY: process.env.WORKS_API_KEY,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === "production",
   },
   images: {
-    domains: ['images.microcms-assets.io'],
+    domains: ["images.microcms-assets.io"],
   },
   swcMinify: true,
-}
+};
