@@ -1,11 +1,11 @@
-import { useRef, useEffect } from 'react'
+import { useEffect, useRef } from "react";
 
 export const useUnmount = (fn: () => any): void => {
-  const fnRef = useRef(fn)
+  const fnRef = useRef(fn);
 
-  fnRef.current = fn
+  fnRef.current = fn;
 
   useEffect(() => {
-    return () => fnRef.current()
-  }, [])
-}
+    return () => fnRef.current();
+  }, []);
+};

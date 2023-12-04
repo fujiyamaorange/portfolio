@@ -1,40 +1,40 @@
-import { useEffect, useRef } from 'react'
-import Image from 'next/image'
-import Typed from 'typed.js'
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 
-import { profile } from '@/types/cms-types'
-import { Div100vh } from '@/components/basic/Div100vh'
-import { Terminal } from '@/components/anime/Terminal'
-import useMedia from '@/hooks/useMedia'
-import { CameraContent } from '@/components/anime/CameraContent'
+import { CameraContent } from "@/components/anime/CameraContent";
+import { Terminal } from "@/components/anime/Terminal";
+import { Div100vh } from "@/components/basic/Div100vh";
+import useMedia from "@/hooks/useMedia";
+import { profile } from "@/types/cms-types";
 
-type Props = { data: profile }
+type Props = { data: profile };
 
 export const MySelf = (props: Props) => {
-  const { name, image } = props.data
+  const { name, image } = props.data;
 
-  const isUnder540 = useMedia('(max-width: 540px)')
+  const isUnder540 = useMedia("(max-width: 540px)");
 
-  const el = useRef(null)
+  const el = useRef(null);
 
   useEffect(() => {
     const options = {
       strings: [
-        '<span>Hello&sbquo;&ensp;</span>I&rsquo;m Fujimura Kaito.',
-        'I live in Fukuoka&sbquo; Japan.',
-        'I&rsquo;m a Web Developer.',
+        "<span>Hello&sbquo;&ensp;</span>I&rsquo;m Fujimura Kaito.",
+        "I live in Fukuoka&sbquo; Japan.",
+        "I&rsquo;m a Web Developer.",
       ],
       typeSpeed: 100,
       backSpeed: 30,
       loop: true,
-    }
+    };
 
-    const typed = new Typed(el.current ?? '', options)
+    const typed = new Typed(el.current ?? "", options);
 
     return () => {
-      typed.destroy()
-    }
-  }, [])
+      typed.destroy();
+    };
+  }, []);
 
   return (
     <main className="text-white">
@@ -67,5 +67,5 @@ export const MySelf = (props: Props) => {
         )}
       </section>
     </main>
-  )
-}
+  );
+};

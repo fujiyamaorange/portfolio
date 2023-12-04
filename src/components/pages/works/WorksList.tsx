@@ -1,23 +1,21 @@
-import Image from 'next/image'
-import clsx from 'clsx'
+import { NextImage } from "@/components/basic/NextImage";
+import { works } from "@/types/cms-types";
+import clsx from "clsx";
+import Image from "next/image";
 
-import { works } from '@/types/cms-types'
-import { NextImage } from '@/components/basic/NextImage'
-import { EagerImage } from '@/components/basic/EagerImage'
+type Props = { data: works[] };
+type SKILL = Pick<works, "skill">["skill"][number];
 
-type Props = { data: works[] }
-type SKILL = Pick<works, 'skill'>['skill'][number]
-
-export const WorksList: React.VFC<Props> = (props) => {
+export const WorksList = (props: Props) => {
   return (
     <main className="absolute w-screen px-8 pt-8 text-white top-16">
       <section className="flex flex-col justify-center">
         {props.data.map((work: works, i: number) => (
           <div
             key={work.id}
-            className={clsx('flex flex-col mb-8 text-white mx-auto', {
-              'sm:flex-row-reverse animate-slidein-from-right': i % 2 == 1,
-              'sm:flex-row animate-slidein-from-left': i % 2 == 0,
+            className={clsx("flex flex-col mb-8 text-white mx-auto", {
+              "sm:flex-row-reverse animate-slidein-from-right": i % 2 === 1,
+              "sm:flex-row animate-slidein-from-left": i % 2 === 0,
             })}
           >
             <NextImage
@@ -43,6 +41,7 @@ export const WorksList: React.VFC<Props> = (props) => {
                 {work.title}
               </h3>
               <div
+                // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
                 dangerouslySetInnerHTML={{ __html: work.explanation }}
                 className="mb-8 text-base selection:text-black selection:bg-white"
               />
@@ -110,5 +109,5 @@ export const WorksList: React.VFC<Props> = (props) => {
         ))}
       </section>
     </main>
-  )
-}
+  );
+};

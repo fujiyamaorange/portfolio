@@ -1,18 +1,18 @@
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
-import { menus, MENU } from '@/constant/menu'
-import { NextImage } from '../basic/NextImage'
+import { MENU, menus } from "@/constant/menu";
+import { NextImage } from "../basic/NextImage";
 
 export const Nav: React.VFC = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    path: string
+    path: string,
   ) => {
-    e.preventDefault()
-    router.push(path)
-  }
+    e.preventDefault();
+    router.push(path);
+  };
 
   return (
     <header className="fixed z-50 flex items-center justify-between w-full h-16 px-4 font-semibold text-white bg-black bg-opacity-80 sm:px-8">
@@ -57,7 +57,7 @@ export const Nav: React.VFC = () => {
             <button
               type="button"
               role="link"
-              aria-label={menu.name + 'Link'}
+              aria-label={`${menu.name}Link`}
               title={menu.name}
               onClick={(e) => handleClick(e, menu.url)}
               className="px-2 py-2 transition duration-300 rounded-md hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-white selection:bg-white selection:text-black"
@@ -68,5 +68,5 @@ export const Nav: React.VFC = () => {
         ))}
       </ul>
     </header>
-  )
-}
+  );
+};

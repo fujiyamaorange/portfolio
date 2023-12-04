@@ -1,4 +1,4 @@
-import Image, { ImageProps } from 'next/image'
+import Image, { ImageProps } from "next/image";
 
 export const NextImage: React.VFC<ImageProps> = ({
   className,
@@ -9,5 +9,5 @@ export const NextImage: React.VFC<ImageProps> = ({
     <div className={className}>
       <Image {...others} alt={alt} />
     </div>
-  )
-}
+  );
+};

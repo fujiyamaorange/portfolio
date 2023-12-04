@@ -1,20 +1,20 @@
-import clsx from 'clsx'
-import styles from '@/styles/Terminal.module.css'
-import { profile } from '@/types/cms-types'
+import styles from "@/styles/Terminal.module.css";
+import { profile } from "@/types/cms-types";
+import clsx from "clsx";
 
 type Props = {
-  data: profile
-}
+  data: profile;
+};
 
 export const Terminal: React.VFC<Props> = ({ data }) => {
-  const { name, introduce, hobby } = data
+  const { name, introduce, hobby } = data;
 
   const onCloseClick = () => {
-    alert('NICE!!')
-  }
+    alert("NICE!!");
+  };
 
   return (
-    <main className={clsx(styles.container, 'selection:bg-transparent')}>
+    <main className={clsx(styles.container, "selection:bg-transparent")}>
       <div className={styles.terminal}>
         <section className={styles.terminal__bar}>
           <div className={styles.bar__buttons}>
@@ -46,17 +46,17 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             <span className={styles.terminal__prompt__user}>user@ubuntu:</span>
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
-            <div dangerouslySetInnerHTML={{ __html: introduce }}></div>
+            <div dangerouslySetInnerHTML={{ __html: introduce }} />
           </div>
           <div className={styles.terminal__prompt}>
             <span className={styles.terminal__prompt__user}>user@ubuntu:</span>
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
             <p>{hobby}</p>
-            <span className={styles.terminal__prompt__cursor}></span>
+            <span className={styles.terminal__prompt__cursor} />
           </div>
         </section>
       </div>
     </main>
-  )
-}
+  );
+};

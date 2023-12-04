@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react'
-import { Nav } from './Nav'
-import { ShootingStars } from '../anime/ShootingStars'
+import { PropsWithChildren } from "react";
+import { ShootingStars } from "../anime/ShootingStars";
+import { Nav } from "./Nav";
 
 export const Layout = ({ children }: PropsWithChildren) => {
   return (
@@ -10,5 +10,5 @@ export const Layout = ({ children }: PropsWithChildren) => {
       <Nav />
       <main className="relative z-10">{children}</main>
     </>
-  )
-}
+  );
+};
