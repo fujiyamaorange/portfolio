@@ -4,7 +4,7 @@ export function on<T extends Window | Document | HTMLElement | EventTarget>(
     | Parameters<T["addEventListener"]>
     | [string, (args: any) => any | null, ...any[]]
 ): void {
-  if (obj && obj.addEventListener) {
+  if (obj?.addEventListener) {
     obj.addEventListener(
       ...(args as Parameters<HTMLElement["addEventListener"]>),
     );

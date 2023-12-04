@@ -4,7 +4,7 @@ export function off<T extends Window | Document | HTMLElement | EventTarget>(
     | Parameters<T["removeEventListener"]>
     | [string, (args: any) => any | null, ...any[]]
 ): void {
-  if (obj && obj.removeEventListener) {
+  if (obj?.removeEventListener) {
     obj.removeEventListener(
       ...(args as Parameters<HTMLElement["removeEventListener"]>),
     );

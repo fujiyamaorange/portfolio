@@ -46,14 +46,14 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             <span className={styles.terminal__prompt__user}>user@ubuntu:</span>
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
-            <div dangerouslySetInnerHTML={{ __html: introduce }}></div>
+            <div dangerouslySetInnerHTML={{ __html: introduce }} />
           </div>
           <div className={styles.terminal__prompt}>
             <span className={styles.terminal__prompt__user}>user@ubuntu:</span>
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
             <p>{hobby}</p>
-            <span className={styles.terminal__prompt__cursor}></span>
+            <span className={styles.terminal__prompt__cursor} />
           </div>
         </section>
       </div>

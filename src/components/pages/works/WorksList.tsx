@@ -16,8 +16,8 @@ export const WorksList: React.VFC<Props> = (props) => {
           <div
             key={work.id}
             className={clsx("flex flex-col mb-8 text-white mx-auto", {
-              "sm:flex-row-reverse animate-slidein-from-right": i % 2 == 1,
-              "sm:flex-row animate-slidein-from-left": i % 2 == 0,
+              "sm:flex-row-reverse animate-slidein-from-right": i % 2 === 1,
+              "sm:flex-row animate-slidein-from-left": i % 2 === 0,
             })}
           >
             <NextImage
