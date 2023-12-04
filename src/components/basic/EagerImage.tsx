@@ -16,12 +16,12 @@ export const EagerImage = ({
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        for (const entry of entries) {
           if (entry.isIntersecting && imgRef.current) {
             imgRef.current.src = src ?? "";
             observer.unobserve(entry.target);
           }
-        });
+        }
       },
       {
         rootMargin: "0px",
