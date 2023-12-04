@@ -5,7 +5,7 @@
   },
   "files": {
     "include": ["./**/*.ts", "./**/*.tsx"],
-    "ignore": ["./src/schema/**", "./.contents/**"]
+    "ignore": ["./src/schema/**", "./.contents/**", "./.next/**"]
   },
   "linter": {
     "enabled": true,

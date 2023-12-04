@@ -6,8 +6,8 @@
     "build": "next build",
     "build:posts": "ts-node --project tsconfig.builder.json ./src/builder/posts.ts",
     "start": "next start",
-    "lint": "biome lint ./",
-    "fmt": "biome format --write ./",
+    "lint": "biome check ./",
+    "fmt": "biome check --apply ./",
     "export": "next build && next export",
     "serve": "yarn export && serve ./out",
     "cms-gen": "yarn microcms-typescript src/schema src/types/cms-types.ts"
