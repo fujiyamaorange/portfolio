@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import { menus, MENU } from "@/constant/menu";
+import { MENU, menus } from "@/constant/menu";
 import { NextImage } from "../basic/NextImage";
 
 export const Nav: React.VFC = () => {

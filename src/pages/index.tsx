@@ -1,9 +1,9 @@
-import { getProfile } from "@/libs/microCMS/getProfile";
 import { MySelf } from "@/components/pages/index/MySelf";
+import { getProfile } from "@/libs/microCMS/getProfile";
 
 import { Zenn } from "@/components/pages/index/Zenn";
 import { getZennArticles } from "@/libs/zenn/getZennArticles";
-import type { NextPage, InferGetStaticPropsType } from "next";
+import type { InferGetStaticPropsType, NextPage } from "next";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

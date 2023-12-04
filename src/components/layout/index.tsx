@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
-import { Nav } from "./Nav";
 import { ShootingStars } from "../anime/ShootingStars";
+import { Nav } from "./Nav";
 
 export const Layout = ({ children }: PropsWithChildren) => {
   return (

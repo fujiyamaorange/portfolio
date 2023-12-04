@@ -1,5 +1,5 @@
-import { NextSeo } from "next-seo";
 import { Layout } from "@/components/layout";
+import { NextSeo } from "next-seo";
 import type { AppProps } from "next/app";
 import "../styles/globals.css";
 

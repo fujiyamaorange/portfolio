@@ -1,12 +1,12 @@
-import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-import { profile } from "@/types/cms-types";
-import { Div100vh } from "@/components/basic/Div100vh";
-import { Terminal } from "@/components/anime/Terminal";
-import useMedia from "@/hooks/useMedia";
 import { CameraContent } from "@/components/anime/CameraContent";
+import { Terminal } from "@/components/anime/Terminal";
+import { Div100vh } from "@/components/basic/Div100vh";
+import useMedia from "@/hooks/useMedia";
+import { profile } from "@/types/cms-types";
 
 type Props = { data: profile };
 

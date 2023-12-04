@@ -1,7 +1,7 @@
 import { WorksList } from "@/components/pages/works/WorksList";
 import { getWorks } from "@/libs/microCMS/getWorks";
 
-import type { NextPage, InferGetStaticPropsType } from "next";
+import type { InferGetStaticPropsType, NextPage } from "next";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 

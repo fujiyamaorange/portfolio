@@ -1,6 +1,6 @@
 // https://github.com/mvasin/react-div-100vh/blob/master/packages/react-div-100vh/src/index.tsx
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
 
 export const use100vh = (): number | null => {
