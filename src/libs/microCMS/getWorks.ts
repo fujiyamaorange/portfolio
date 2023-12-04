@@ -9,8 +9,10 @@ type DATA = {
   contents: works[]
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getWorks = async (): Promise<AxiosResponse<DATA, any>> => {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const res: AxiosResponse<DATA, any> = await axios.get(
       `${ENDPOINT}/works?limit=100`,
       {

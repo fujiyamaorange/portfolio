@@ -3,7 +3,6 @@ import clsx from 'clsx'
 
 import { works } from '@/types/cms-types'
 import { NextImage } from '@/components/basic/NextImage'
-import { EagerImage } from '@/components/basic/EagerImage'
 
 type Props = { data: works[] }
 type SKILL = Pick<works, 'skill'>['skill'][number]

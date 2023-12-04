@@ -54,6 +54,7 @@ export const ShootingStars = () => {
       ],
       easing: 'linear',
       loop: true,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delay: (_: any, i: number) => 50 * i,
     })
   }
@@ -62,6 +63,7 @@ export const ShootingStars = () => {
       targets: ['.shootingstars .wish'],
       easing: 'linear',
       loop: true,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delay: (_: any, i: number) => 1000 * i,
       opacity: [
         {

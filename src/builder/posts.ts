@@ -68,13 +68,13 @@ async function getMemberFeedItems(member: Member): Promise<PostItem[]> {
   // remove items which not matches includeUrlRegex
   if (includeUrlRegex) {
     postItems = postItems.filter((item) => {
-      return item.link.match(new RegExp(includeUrlRegex))
+      return RegExp(new RegExp(includeUrlRegex)).exec(item.link)
     })
   }
   // remove items which matches excludeUrlRegex
   if (excludeUrlRegex) {
     postItems = postItems.filter((item) => {
-      return !item.link.match(new RegExp(excludeUrlRegex))
+      return !RegExp(new RegExp(excludeUrlRegex)).exec(item.link)
     })
   }
 
