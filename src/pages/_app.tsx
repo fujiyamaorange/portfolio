@@ -18,14 +18,14 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           locale: 'jp_JP',
           images: [
             {
-              url: 'https://user-images.githubusercontent.com/63333564/148645805-6fd653e0-ced6-43da-b17e-04f47f7ac0a1.png',
+              url: 'https://github.com/fujiyamaorange/portfolio/assets/63333564/6d1d3c58-9723-4fe8-8603-3f211c1760e4',
               width: 800,
               height: 600,
               alt: 'fujiyamaorange portfolio',
               type: 'image/',
             },
             {
-              url: 'https://user-images.githubusercontent.com/63333564/148645805-6fd653e0-ced6-43da-b17e-04f47f7ac0a1.png',
+              url: 'https://github.com/fujiyamaorange/portfolio/assets/63333564/6d1d3c58-9723-4fe8-8603-3f211c1760e4',
               width: 900,
               height: 800,
               alt: 'fujiyamaorange portfolio',
