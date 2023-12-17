@@ -2,7 +2,11 @@ import { profile } from "@/types/cms-types";
 import { PostItem } from "@/types/zenn";
 import Image from "next/image";
 
-type Props = { data: profile; articles: PostItem[] };
+type Props = {
+  data: profile;
+  articles: PostItem[];
+  ogpImages: (string | null)[];
+};
 
 const jumpLink = (url: string) => {
   window.open(url, "_blank");
@@ -19,7 +23,7 @@ export const Zenn = (props: Props) => {
         </span>
       </div>
       <div className="grid gap-2 sm:grid-cols-3 sm:gap-4">
-        {articles.map((article) => (
+        {articles.map((article, i) => (
           <article
             key={article.link}
             className="px-8 py-4 transition duration-150 hover:scale-110 bg-slate-800 hover:bg-slate-700"
@@ -38,7 +42,11 @@ export const Zenn = (props: Props) => {
                   />
                   <p>{article.authorName}</p>
                 </div>
-                <h2 className="font-semibold">{article.title}</h2>
+                <img
+                  className="mt-2"
+                  src={props.ogpImages[i] ?? "/no_image.png"}
+                  alt={article.title}
+                />
                 <p className="hidden mt-4 text-sm text-gray-400 sm:block">
                   {article.contentSnippet?.substring(0, 80)}...
                 </p>
