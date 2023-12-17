@@ -12,7 +12,8 @@ module.exports = {
     removeConsole: process.env.NODE_ENV === "production",
   },
   images: {
-    domains: ["images.microcms-assets.io"],
+    // zenn OGP: res.cloudinary.com
+    domains: ["images.microcms-assets.io", "res.cloudinary.com"],
   },
   swcMinify: true,
 };
