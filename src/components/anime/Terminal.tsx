@@ -26,10 +26,10 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             >
               &#10005;
             </button>
-            <button disabled className={styles.bar__button}>
+            <button type="button" disabled className={styles.bar__button}>
               &#9472;
             </button>
-            <button disabled className={styles.bar__button}>
+            <button type="button" disabled className={styles.bar__button}>
               &#9723;
             </button>
           </div>
@@ -46,6 +46,7 @@ export const Terminal: React.VFC<Props> = ({ data }) => {
             <span className={styles.terminal__prompt__user}>user@ubuntu:</span>
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
+            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
             <div dangerouslySetInnerHTML={{ __html: introduce }} />
           </div>
           <div className={styles.terminal__prompt}>
