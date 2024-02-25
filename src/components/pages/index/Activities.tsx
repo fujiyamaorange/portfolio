@@ -1,4 +1,5 @@
 import { Activity } from "@/types/activity";
+import { KeyboardEvent } from "react";
 
 type Props = {
 	activities: Activity[];
@@ -6,6 +7,12 @@ type Props = {
 
 const jumpLink = (url: string) => {
 	window.open(url, "_blank");
+};
+
+const handleKeyDown = (event: KeyboardEvent<HTMLElement>, link: string) => {
+	if (event.key === "Enter") {
+		jumpLink(link);
+	}
 };
 
 export const Activities = (props: Props) => {
@@ -22,8 +29,10 @@ export const Activities = (props: Props) => {
 				{activities.map((activity, i) => (
 					<article
 						key={activity.link}
-						className="px-8 py-4 transition duration-150 hover:scale-110 bg-slate-800 hover:bg-slate-700"
+						className="px-8 py-4 transition duration-150 focus:scale-110 hover:scale-110 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"
 						onClick={() => jumpLink(activity.link)}
+						onKeyUp={(e) => handleKeyDown(e, activity.link)}
+						tabIndex={0}
 					>
 						<div className="sm:flex sm:flex-col sm:justify-between sm:h-full">
 							<div>
