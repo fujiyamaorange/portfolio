@@ -53,7 +53,7 @@ export const MySelf = (props: Props) => {
           aria-hidden="true"
           alt="user icon"
         />
-        <span className="mt-4 font-semibold selection:bg-white selection:text-black">
+        <span className="mt-4 text-2xl font-semibold selection:bg-white selection:text-black">
           {name}
         </span>
       </section>
