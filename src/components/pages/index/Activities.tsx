@@ -25,7 +25,7 @@ export const Activities = (props: Props) => {
 					OSS Activities
 				</span>
 			</div>
-			<div className="grid gap-2 sm:grid-cols-3 sm:gap-4">
+			<div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4">
 				{activities.map((activity, i) => (
 					<article
 						key={activity.link}

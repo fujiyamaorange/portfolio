@@ -29,7 +29,7 @@ export const Zenn = (props: Props) => {
 					Zenn
 				</span>
 			</div>
-			<div className="grid gap-2 sm:grid-cols-3 sm:gap-4">
+			<div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4">
 				{articles.map((article, i) => (
 					<article
 						key={article.link}
