@@ -33,7 +33,7 @@ export const Zenn = (props: Props) => {
 				{articles.map((article, i) => (
 					<article
 						key={article.link}
-						className="px-8 py-4 transition duration-150 focus:scale-110 hover:scale-110 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"
+						className="px-8 py-4 transition duration-150 hover:scale-105 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"
 						onClick={() => jumpLink(article.link)}
 						onKeyUp={(e) => handleKeyDown(e, article.link)}
 						tabIndex={0}
