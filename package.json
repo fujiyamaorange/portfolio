@@ -33,7 +33,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.20",
     "@types/react": "18.2.58",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.18",
     "fs-extra": "^11.2.0",
     "microcms-typescript": "^1.0.14",
     "postcss": "^8.4.35",
