@@ -19,6 +19,7 @@ export const getStaticProps = async () => {
     }),
   );
   const activityUrls = [
+    "https://github.com/biomejs/biome/pull/2112",
     "https://github.com/biomejs/biome/pull/1881",
     "https://github.com/raycast/extensions/pull/10031",
     "https://github.com/raycast/extensions/pull/10714",
