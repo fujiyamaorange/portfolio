@@ -36,7 +36,7 @@
     "autoprefixer": "^10.4.17",
     "fs-extra": "^11.2.0",
     "microcms-typescript": "^1.0.14",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.38",
     "rss-parser": "^3.13.0",
     "serve": "^14.2.1",
     "tailwindcss": "^3.4.1",
