@@ -23,7 +23,7 @@
     "next": "12.3.1",
     "next-seo": "^6.5.0",
     "node-fetch": "^3.3.2",
-    "react": "18.2.0",
+    "react": "18.3.1",
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "typed.js": "^2.1.0"
@@ -32,7 +32,7 @@
     "@biomejs/biome": "^1.5.3",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.11.20",
-    "@types/react": "18.2.58",
+    "@types/react": "18.3.1",
     "autoprefixer": "^10.4.17",
     "fs-extra": "^11.2.0",
     "microcms-typescript": "^1.0.14",
