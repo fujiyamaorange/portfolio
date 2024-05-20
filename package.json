@@ -39,7 +39,7 @@
     "postcss": "^8.4.38",
     "rss-parser": "^3.13.0",
     "serve": "^14.2.3",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "ts-node": "^10.9.2",
     "typescript": "5.4"
   }
