@@ -19,13 +19,13 @@ export const getStaticProps = async () => {
     }),
   );
   const activityUrls = [
+    "https://github.com/biomejs/biome/pull/2930",
     "https://github.com/biomejs/biome/pull/2867",
     "https://github.com/biomejs/biome/pull/2112",
     "https://github.com/biomejs/biome/pull/1881",
     "https://github.com/raycast/extensions/pull/10031",
     "https://github.com/raycast/extensions/pull/10714",
     "https://github.com/rollbar/rollbar.js/pull/1128",
-    
   ];
   const activities = await Promise.all(
     activityUrls.map(async (url) => {
