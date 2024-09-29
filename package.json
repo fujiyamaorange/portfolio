@@ -17,7 +17,8 @@
     "@types/animejs": "^3.1.12",
     "animejs": "^3.2.2",
     "axios": "^1.7.7",
-    "cheerio": "^1.0.0-rc.12",
+    "cheerio": "^1.0.0",
+
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
     "next": "12.3.1",
