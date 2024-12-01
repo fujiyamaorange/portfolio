@@ -1,5 +1,7 @@
-import { Activity } from "@/types/activity";
-import { KeyboardEvent } from "react";
+"use client";
+
+import type { Activity } from "@/types/activity";
+import type { KeyboardEvent } from "react";
 
 type Props = {
   activities: Activity[];
@@ -32,6 +34,7 @@ export const Activities = (props: Props) => {
             className="px-8 py-4 transition duration-150 hover:scale-105 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => jumpLink(activity.link)}
             onKeyUp={(e) => handleKeyDown(e, activity.link)}
+            //  biome-ignore lint/a11y/noNoninteractiveTabindex: This shoule be accessible
             tabIndex={0}
           >
             <div className="sm:flex sm:flex-col sm:justify-between sm:h-full">

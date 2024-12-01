@@ -1,10 +1,11 @@
-import { profile } from "@/types/cms-types";
-import { PostItem } from "@/types/zenn";
+"use client";
+
+import type { profile } from "@/types/cms-types";
+import type { PostItem } from "@/types/zenn";
 import Image from "next/image";
-import { KeyboardEvent } from "react";
+import type { KeyboardEvent } from "react";
 
 type Props = {
-  data: profile;
   articles: PostItem[];
   ogpImages: (string | null)[];
 };
@@ -36,6 +37,7 @@ export const Zenn = (props: Props) => {
             className="px-8 py-4 transition duration-150 hover:scale-105 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={() => jumpLink(article.link)}
             onKeyUp={(e) => handleKeyDown(e, article.link)}
+            //  biome-ignore lint/a11y/noNoninteractiveTabindex: This shoule be accessible
             tabIndex={0}
           >
             <div className="sm:flex sm:flex-col sm:justify-between sm:h-full">

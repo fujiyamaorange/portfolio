@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
@@ -6,12 +8,12 @@ import { CameraContent } from "@/components/anime/CameraContent";
 import { Terminal } from "@/components/anime/Terminal";
 import { Div100vh } from "@/components/basic/Div100vh";
 import useMedia from "@/hooks/useMedia";
-import { profile } from "@/types/cms-types";
+import type { profile } from "@/types/cms-types";
 
-type Props = { data: profile };
+type Props = { profile: profile };
 
-export const MySelf = (props: Props) => {
-  const { name, image } = props.data;
+export const MySelf = ({ profile }: Props) => {
+  const { name, image } = profile;
 
   const isUnder540 = useMedia("(max-width: 540px)");
 
@@ -60,10 +62,10 @@ export const MySelf = (props: Props) => {
       <section>
         {isUnder540 ? (
           <div className="mt-16 mb-32">
-            <CameraContent data={props.data} />
+            <CameraContent data={profile} />
           </div>
         ) : (
-          <Terminal data={props.data} />
+          <Terminal data={profile} />
         )}
       </section>
     </main>

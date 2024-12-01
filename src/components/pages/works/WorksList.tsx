@@ -1,5 +1,5 @@
 import { NextImage } from "@/components/basic/NextImage";
-import { works } from "@/types/cms-types";
+import type { works } from "@/types/cms-types";
 import clsx from "clsx";
 import Image from "next/image";
 

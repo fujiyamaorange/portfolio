@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import { load } from 'cheerio';
+import { load } from "cheerio";
+import fetch from "node-fetch";
 
 interface Activity {
   title: string;
@@ -19,7 +19,7 @@ export const getActivities = async (url: string): Promise<Activity> => {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
 
     const html = await response.text();
@@ -42,7 +42,7 @@ export const getActivities = async (url: string): Promise<Activity> => {
       details,
     };
   } catch (error) {
-    console.error('Failed to fetch activity:', error);
+    console.error("Failed to fetch activity:", error);
     return {
       title: "404 Not Found",
       link: url,
