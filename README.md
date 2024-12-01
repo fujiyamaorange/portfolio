@@ -9,7 +9,7 @@
 
 ### Make types file from microCMS using microcms-typescript
 
-`yarn cms-gen`
+`npm run cms-gen`
 
 ### Preview
 

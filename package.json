@@ -10,18 +10,17 @@
     "fmt": "biome check --apply ./",
     "fmt:unsafe": "biome check --apply-unsafe ./",
     "export": "next build && next export",
-    "serve": "yarn export && serve ./out",
-    "cms-gen": "yarn microcms-typescript src/schema src/types/cms-types.ts"
+    "serve": "npm run export && serve ./out",
+    "cms-gen": "npm run microcms-typescript src/schema src/types/cms-types.ts"
   },
   "dependencies": {
     "@types/animejs": "^3.1.12",
     "animejs": "^3.2.2",
     "axios": "^1.7.7",
     "cheerio": "^1.0.0",
-
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
-    "next": "12.3.1",
+    "next": "^15.0.3",
     "next-seo": "^6.6.0",
     "node-fetch": "^3.3.2",
     "react": "18.3.1",

@@ -6,12 +6,8 @@ import { getProfile } from "@/libs/microCMS/getProfile";
 import { getOpgImage } from "@/libs/zenn/getArticleOgpUrl";
 import { getZennArticles } from "@/libs/zenn/getZennArticles";
 
-import type { InferGetStaticPropsType, NextPage } from "next";
-
-type Props = InferGetStaticPropsType<typeof getStaticProps>;
-
-export const getStaticProps = async () => {
-  const res = await getProfile();
+const Home = async () => {
+  const profile = await getProfile();
   const articles = getZennArticles();
   const ogpImages = await Promise.all(
     articles.map(async (article) => {
@@ -27,32 +23,18 @@ export const getStaticProps = async () => {
     "https://github.com/raycast/extensions/pull/10714",
     "https://github.com/rollbar/rollbar.js/pull/1128",
   ];
+
   const activities = await Promise.all(
     activityUrls.map(async (url) => {
       return await getActivities(url);
     }),
   );
 
-  return {
-    props: {
-      data: res.data,
-      articles,
-      ogpImages,
-      activities,
-    },
-  };
-};
-
-const Home: NextPage<Props> = (props) => {
   return (
     <>
-      <MySelf data={props.data} />
-      <Activities activities={props.activities} />
-      <Zenn
-        data={props.data}
-        articles={props.articles}
-        ogpImages={props.ogpImages}
-      />
+      <MySelf profile={profile.data} />
+      <Activities activities={activities} />
+      <Zenn articles={articles} ogpImages={ogpImages} />
     </>
   );
 };

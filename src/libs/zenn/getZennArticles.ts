@@ -1,4 +1,4 @@
-import { PostItem } from "@/types/zenn";
+import type { PostItem } from "@/types/zenn";
 import posts from "../../../.contents/posts.json";
 
 export const getZennArticles = (): PostItem[] => {

@@ -1,8 +1,10 @@
-import { PropsWithChildren } from "react";
+"use client";
+
+import type { ReactNode } from "react";
 import { ShootingStars } from "../anime/ShootingStars";
 import { Nav } from "./Nav";
 
-export const Layout = ({ children }: PropsWithChildren) => {
+export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       {/* ヘッダーと背景のアニメーション */}

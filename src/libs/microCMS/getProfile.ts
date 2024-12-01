@@ -1,6 +1,5 @@
-import axios, { AxiosResponse } from "axios";
-
-import { profile } from "../../types/cms-types";
+import axios, { type AxiosResponse } from "axios";
+import type { profile } from "../../types/cms-types";
 
 const PROFILE_API_KEY: string = process.env.PROFILE_API_KEY || "";
 const ENDPOINT: string = process.env.ENDPOINT || "";

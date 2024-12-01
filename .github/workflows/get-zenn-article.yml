@@ -4,6 +4,7 @@ on:
   schedule:
     # 毎日12時に実行
     - cron: '0 3 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,10 +19,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: yarn install
+      - run: npm install
       - name: build posts
         run: |
-          yarn build:posts
+          npm run build:posts
 
       - uses: peter-evans/create-pull-request@v4
         with:
