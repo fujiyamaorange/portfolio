@@ -10,8 +10,8 @@
     "fmt": "biome check --apply ./",
     "fmt:unsafe": "biome check --apply-unsafe ./",
     "export": "next build && next export",
-    "serve": "yarn export && serve ./out",
-    "cms-gen": "yarn microcms-typescript src/schema src/types/cms-types.ts"
+    "serve": "npm run export && serve ./out",
+    "cms-gen": "npm run microcms-typescript src/schema src/types/cms-types.ts"
   },
   "dependencies": {
     "@types/animejs": "^3.1.12",
