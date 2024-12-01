@@ -32,7 +32,7 @@ const Home = async () => {
 
   return (
     <>
-      <MySelf profile={profile.data} />
+      <MySelf profile={profile} />
       <Activities activities={activities} />
       <Zenn articles={articles} ogpImages={ogpImages} />
     </>

@@ -3,9 +3,8 @@
 ### Architecture
 
 - TypeScript
-- Next.js
+- Next.js v15(app router)
 - microCMS
-- SSG
 
 ### Make types file from microCMS using microcms-typescript
 
