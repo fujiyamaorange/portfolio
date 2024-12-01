@@ -3,14 +3,14 @@ import type { works } from "@/types/cms-types";
 import clsx from "clsx";
 import Image from "next/image";
 
-type Props = { data: works[] };
+type Props = { contents: works[] };
 type SKILL = Pick<works, "skill">["skill"][number];
 
-export const WorksList = (props: Props) => {
+export const WorksList = ({ contents }: Props) => {
   return (
     <main className="absolute w-screen px-8 pt-8 text-white top-16">
       <section className="flex flex-col justify-center">
-        {props.data.map((work: works, i: number) => (
+        {contents.map((work: works, i: number) => (
           <div
             key={work.id}
             className={clsx("flex flex-col mb-8 text-white mx-auto", {
