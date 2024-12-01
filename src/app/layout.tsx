@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { Layout } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: "Porfolio | fujiyamaorange",
@@ -51,7 +52,9 @@ export default function RootLayout({
           sizes="76x76"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <Layout>{children}</Layout>
+      </body>
     </html>
   );
 }

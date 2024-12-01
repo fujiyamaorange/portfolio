@@ -1,9 +1,8 @@
-import { useRouter } from "next/router";
-
 import { type MENU, menus } from "@/constant/menu";
+import { useRouter } from "next/navigation";
 import { NextImage } from "../basic/NextImage";
 
-export const Nav: React.VFC = () => {
+export const Nav = () => {
   const router = useRouter();
 
   const handleClick = (
@@ -54,6 +53,7 @@ export const Nav: React.VFC = () => {
       <ul className="flex">
         {menus.map((menu: MENU) => (
           <li key={menu.name}>
+            {/* TOOD: change it to Link */}
             <button
               type="button"
               role="link"
