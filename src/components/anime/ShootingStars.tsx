@@ -1,3 +1,5 @@
+"use client";
+
 import anime from "animejs";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
@@ -100,7 +102,8 @@ export const ShootingStars = () => {
       <svg className={clsx(styles.sky, "sky")}>
         {[...Array(NUM)].map((_, i) => (
           <circle
-            key={`${i}star`}
+            //  biome-ignore lint/suspicious/noArrayIndexKey: skip
+            key={`${i} star`}
             cx={getRandomX()}
             cy={getRandomY()}
             r={radius}
@@ -114,7 +117,8 @@ export const ShootingStars = () => {
       <div className={clsx(styles.shootingstars, "shootingstars")}>
         {[...Array(NUM)].map((_, i) => (
           <div
-            key={`${i}wish`}
+            //  biome-ignore lint/suspicious/noArrayIndexKey: skip
+            key={`${i} wish`}
             className={clsx(styles.wish, "wish")}
             style={{
               left: `${getRandomY()}px`,
