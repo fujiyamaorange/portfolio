@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: "Porfolio | fujiyamaorange",
-  description: "Portfolio of fujiyamaorange",
+  description: "I'm a Web Developer.",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta property="og:title" content="Porfolio | fujiyamaorange" />
-        <meta property="og:description" content="Portfolio of fujiyamaorange" />
+        <meta property="og:description" content="I'm a Web Developer." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://fujiyamaorange.vercel.app" />
         <meta property="og:locale" content="en_US" />
@@ -31,10 +31,7 @@ export default function RootLayout({
         <meta name="twitter:site" content="@fujiyamaorange" />
         <meta name="twitter:creator" content="@fujiyamaorange" />
         <meta name="twitter:title" content="Porfolio | fujiyamaorange" />
-        <meta
-          name="twitter:description"
-          content="Portfolio of fujiyamaorange"
-        />
+        <meta name="twitter:description" content="I'm a Web Developer." />
         <meta
           name="twitter:image"
           content="https://user-images.githubusercontent.com/63333564/148645636-a73c4d97-a417-4eb7-9606-4313102f9d6e.png"

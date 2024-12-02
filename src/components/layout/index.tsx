@@ -1,5 +1,3 @@
-"use client";
-
 import type { ReactNode } from "react";
 import { ShootingStars } from "../anime/ShootingStars";
 import { Nav } from "./Nav";

@@ -1,18 +1,8 @@
 import { type MENU, menus } from "@/constant/menu";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { NextImage } from "../basic/NextImage";
 
 export const Nav = () => {
-  const router = useRouter();
-
-  const handleClick = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    path: string,
-  ) => {
-    e.preventDefault();
-    router.push(path);
-  };
-
   return (
     <header className="fixed z-50 flex items-center justify-between w-full h-16 px-4 font-semibold text-white bg-black bg-opacity-80 sm:px-8">
       <div className="flex items-center space-x-4">
@@ -53,17 +43,14 @@ export const Nav = () => {
       <ul className="flex">
         {menus.map((menu: MENU) => (
           <li key={menu.name}>
-            {/* TOOD: change it to Link */}
-            <button
-              type="button"
-              role="link"
-              aria-label={`${menu.name}Link`}
-              title={menu.name}
-              onClick={(e) => handleClick(e, menu.url)}
+            <Link
+              prefetch
+              href={menu.url}
+              aria-label={`Go to ${menu.name}`}
               className="px-2 py-2 transition duration-300 rounded-md hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-500 focus:outline-none focus:ring-2 focus:ring-white selection:bg-white selection:text-black"
             >
               {menu.name}
-            </button>
+            </Link>
           </li>
         ))}
       </ul>
