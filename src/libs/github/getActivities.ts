@@ -16,9 +16,7 @@ const formatDate = (dateStr: string): string => {
 
 export const getActivities = async (url: string): Promise<Activity> => {
   try {
-    const response = await fetch(url, {
-      cache: "force-cache",
-    });
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
