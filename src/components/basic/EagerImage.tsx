@@ -1,4 +1,9 @@
-import { DetailedHTMLProps, ImgHTMLAttributes, useEffect, useRef } from "react";
+import {
+  type DetailedHTMLProps,
+  type ImgHTMLAttributes,
+  useEffect,
+  useRef,
+} from "react";
 
 export const EagerImage = ({
   className,
@@ -11,6 +16,7 @@ export const EagerImage = ({
 >) => {
   const imgRef = useRef<HTMLImageElement>(null);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     if (!imgRef.current) return;
 

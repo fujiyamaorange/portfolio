@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef } from "react";
+import { type HTMLAttributes, forwardRef } from "react";
 
 import { use100vh } from "@/hooks/use100vh";
 
