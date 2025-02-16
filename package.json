@@ -40,5 +40,10 @@
     "tailwindcss": "^4.0.6",
     "ts-node": "^10.9.2",
     "typescript": "5.7"
+  },
+  "overrides": {
+    "react-device-detect": {
+      "react": "19.x"
+    }
   }
 }
