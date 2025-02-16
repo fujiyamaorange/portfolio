@@ -1,4 +1,4 @@
-import { profile } from "@/types/cms-types";
+import type { profile } from "@/types/cms-types";
 
 type Props = {
   data: profile;

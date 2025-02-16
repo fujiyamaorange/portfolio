@@ -1,4 +1,4 @@
-import { Member } from "@/types/zenn";
+import type { Member } from "@/types/zenn";
 
 export const member: Member = {
   id: "fujiyama",
