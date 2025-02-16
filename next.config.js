@@ -13,7 +13,7 @@ module.exports = {
   },
   images: {
     // zenn OGP: res.cloudinary.com
-    domains: ["images.microcms-assets.io", "res.cloudinary.com"],
+    domains: ["images.microcms-assets.io", "res.cloudinary.com", "slack-imgs.com"],
   },
   swcMinify: true,
 };

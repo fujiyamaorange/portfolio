@@ -1,6 +1,5 @@
 "use client";
 
-import type { profile } from "@/types/cms-types";
 import type { PostItem } from "@/types/zenn";
 import Image from "next/image";
 import type { KeyboardEvent } from "react";
