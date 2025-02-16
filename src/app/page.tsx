@@ -1,5 +1,6 @@
 import { Activities } from "@/components/pages/index/Activities";
 import { MySelf } from "@/components/pages/index/MySelf";
+import { TechBlogs } from "@/components/pages/index/TechBlogs";
 import { Zenn } from "@/components/pages/index/Zenn";
 import { getActivities } from "@/libs/github/getActivities";
 import { getProfile } from "@/libs/microCMS/getProfile";
@@ -34,6 +35,7 @@ const Home = async () => {
     <>
       <MySelf profile={profile} />
       <Activities activities={activities} />
+      <TechBlogs />
       <Zenn articles={articles} ogpImages={ogpImages} />
     </>
   );
