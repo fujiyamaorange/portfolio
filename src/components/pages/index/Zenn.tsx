@@ -50,7 +50,7 @@ export const Zenn = (props: Props) => {
                     aria-hidden="true"
                     alt="user icon"
                   />
-                  <p>{article.authorName}</p>
+                  <p>{article.authorName.toLowerCase()}</p>
                 </div>
                 <img
                   className="mt-2"

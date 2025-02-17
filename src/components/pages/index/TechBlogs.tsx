@@ -81,15 +81,15 @@ export const TechBlogs = () => {
                     aria-hidden="true"
                     alt="user icon"
                   />
-                  <p>{article.title}</p>
+                  <p>fujiyamaorange</p>
                 </div>
-                <Image
-                  className="mt-2 w-full"
-                  width={300}
-                  height={200}
+                <img
+                  className="mt-2 aspect-1200/630"
                   src={article.imageUrl ?? "/no_image.png"}
                   alt={article.title}
                 />
+
+                <p className="mt-4 font-semibold text-lg">{article.title}</p>
                 <p className="hidden mt-4 text-sm text-gray-400 sm:block">
                   {article.contentSnippet?.substring(0, 80)}...
                 </p>
