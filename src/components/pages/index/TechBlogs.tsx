@@ -24,6 +24,15 @@ const handleKeyDown = (event: KeyboardEvent<HTMLElement>, link: string) => {
 export const TechBlogs = () => {
   const techBlogs: TechBlog[] = [
     {
+      title: "Source Mapを使ってフロントエンドのログを安全に効率よく扱う",
+      link: "https://moneyforward-dev.jp/entry/2025/02/25/140000",
+      imageUrl:
+        "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fcdn.image.st-hatena.com%2Fimage%2Fscale%2Fd2b22c8258d771f35c106366b3698a14dbd8ce77%2Fbackend%3Dimagemagick%3Bversion%3D1%3Bwidth%3D1300%2Fhttps%253A%252F%252Fcdn-ak.f.st-hatena.com%252Fimages%252Ffotolife%252Fm%252FmoneyforwardDev%252F20250220%252F20250220175534.png",
+      contentSnippet:
+        "ログ収集の重要性 近年、サイバー攻撃の増加に伴い、ログ収集と監視はシステムの防御戦略として不可欠です。特に、攻撃の予兆検知やインシデント対応などの観点からログ管理はセキュリティ強化の鍵を握っています。 またビジネス観点からも、ユーザーの行動…",
+      date: "2025-02-25",
+    },
+    {
       title: "マネーフォワードから2名がTSKaigi 2024にてLT登壇します！",
       link: "https://moneyforward-dev.jp/entry/2024/04/23/120000",
       imageUrl:
