@@ -14,7 +14,7 @@
     "cms-gen": "npm run microcms-typescript src/schema src/types/cms-types.ts"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/postcss": "^4.0.12",
     "@types/animejs": "^3.1.13",
     "animejs": "^3.2.2",
     "cheerio": "^1.0.0",
