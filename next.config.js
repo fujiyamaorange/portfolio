@@ -13,7 +13,25 @@ module.exports = {
   },
   images: {
     // zenn OGP: res.cloudinary.com
-    domains: ["images.microcms-assets.io", "res.cloudinary.com", "slack-imgs.com"],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.microcms-assets.io',
+        // port: '',
+        // pathname: '/account123/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        // port: '',
+        // pathname: '/account123/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'slack-imgs.com',
+        // port: '',
+        // pathname: '/account123/**',
+      },
+    ]
   },
-  swcMinify: true,
 };
