@@ -37,7 +37,7 @@
     "microcms-typescript": "^1.0.14",
     "rss-parser": "^3.13.0",
     "serve": "^14.2.4",
-    "tailwindcss": "^4.0.6",
+    "tailwindcss": "^4.1.5",
     "ts-node": "^10.9.2",
     "typescript": "5.7"
   }
