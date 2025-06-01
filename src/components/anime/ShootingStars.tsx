@@ -1,6 +1,6 @@
 "use client";
 
-import anime from "animejs";
+import { animate } from "animejs";
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 
@@ -45,41 +45,39 @@ export const ShootingStars = () => {
   }, [isBrowser]);
 
   const starryNight = () => {
-    anime({
-      targets: [".sky .star"],
+    animate(".sky .star", {
       opacity: [
         {
           duration: 700,
-          value: "0",
+          to: "0",
         },
         {
           duration: 700,
-          value: "1",
+          to: "1",
         },
       ],
-      easing: "linear",
+      ease: "linear",
       loop: true,
       delay: (_, i: number) => 50 * i,
     });
   };
   const shootingStars = () => {
-    anime({
-      targets: [".shootingstars .wish"],
-      easing: "linear",
+    animate(".shootingstars .wish", {
+      ease: "linear",
       loop: true,
       delay: (_, i: number) => 1000 * i,
       opacity: [
         {
           duration: 700,
-          value: "1",
+          to: "1",
         },
       ],
       width: [
         {
-          value: "150px",
+          to: "150px",
         },
         {
-          value: "0px",
+          to: "0px",
         },
       ],
       translateX: 350,
