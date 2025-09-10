@@ -18,8 +18,6 @@ updates:
         patterns:
           - "react"
           - "react-dom"
-      types/react:
-        patterns:
           - "@types/react"
           - "@types/react-dom"
     open-pull-requests-limit: 99
