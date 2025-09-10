@@ -33,7 +33,7 @@
     "@types/react": "18.3.12",
     "autoprefixer": "^10.4.21",
     "fs-extra": "^11.3.0",
-    "microcms-typescript": "^1.0.14",
+    "microcms-typescript": "^1.0.15",
     "rss-parser": "^3.13.0",
     "serve": "^14.2.5",
     "tailwindcss": "^4.1.8",
