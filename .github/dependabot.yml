@@ -9,4 +9,17 @@ updates:
     directory: '/' # Location of package manifests
     schedule:
       interval: 'weekly'
+    groups:
+      tailwindcss:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+      types/react:
+        patterns:
+          - "@types/react"
+          - "@types/react-dom"
     open-pull-requests-limit: 99
