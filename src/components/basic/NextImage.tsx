@@ -1,6 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 
-export const NextImage: React.VFC<ImageProps> = ({
+export const NextImage: React.FC<ImageProps> = ({
   className,
   alt,
   ...others

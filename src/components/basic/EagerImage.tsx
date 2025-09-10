@@ -24,7 +24,7 @@ export const EagerImage = ({
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting && imgRef.current) {
-            imgRef.current.src = src ?? "";
+            imgRef.current.src = src as string;
             observer.unobserve(entry.target);
           }
         }

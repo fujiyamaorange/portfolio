@@ -6,7 +6,7 @@ type Props = {
   data: profile;
 };
 
-export const Terminal: React.VFC<Props> = ({ data }) => {
+export const Terminal: React.FC<Props> = ({ data }) => {
   const { name, introduce, hobby } = data;
 
   const onCloseClick = () => {
