@@ -29,34 +29,43 @@ export const getTalk = async (url: string): Promise<Talk> => {
     const $ = load(html);
 
     // タイトルを取得（Speaker Deckの構造に合わせて調整）
-    const title = $('meta[property="og:title"]').attr("content") || 
-                  $("h1").text().trim() || 
-                  $(".deck-title").text().trim() || "";
-    
+    const title =
+      $('meta[property="og:title"]').attr("content") ||
+      $("h1").text().trim() ||
+      $(".deck-title").text().trim() ||
+      "";
+
     // OGP画像を取得
     const ogpUrl = $('meta[property="og:image"]').attr("content");
-    
+
     // 日付を取得（Speaker Deckの日付形式に対応）
-    const dateStr = $('meta[property="article:published_time"]').attr("content") || 
-                   $('time').attr("datetime") || 
-                   $('.date').text().trim() ||
-                   $('.deck-date').text().trim();
+    const dateStr =
+      $('meta[property="article:published_time"]').attr("content") ||
+      $("time").attr("datetime") ||
+      $(".date").text().trim() ||
+      $(".deck-date").text().trim();
     const date = dateStr ? formatDate(dateStr) : "";
-    
+
     // 作者を取得（Speaker Deckの構造に合わせて調整）
-    const author = $('meta[name="author"]').attr("content") || 
-                  $('.author').text().trim() || 
-                  $('.deck-author').text().trim() || "";
-    
+    const author =
+      $('meta[name="author"]').attr("content") ||
+      $(".author").text().trim() ||
+      $(".deck-author").text().trim() ||
+      "";
+
     // 説明を取得
-    const description = $('meta[property="og:description"]').attr("content") || 
-                       $('.description').text().trim() || 
-                       $('.deck-description').text().trim() || "";
-    
+    const description =
+      $('meta[property="og:description"]').attr("content") ||
+      $(".description").text().trim() ||
+      $(".deck-description").text().trim() ||
+      "";
+
     // カテゴリを取得（Speaker Deckの構造に合わせて調整）
-    const category = $('meta[property="article:section"]').attr("content") || 
-                    $('.category').text().trim() || 
-                    $('.deck-category').text().trim() || "";
+    const category =
+      $('meta[property="article:section"]').attr("content") ||
+      $(".category").text().trim() ||
+      $(".deck-category").text().trim() ||
+      "";
 
     return {
       title,

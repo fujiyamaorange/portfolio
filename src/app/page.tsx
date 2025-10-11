@@ -34,12 +34,12 @@ const Home = async () => {
   const talkTheStageData: TalkData[] = [
     {
       url: "https://speakerdeck.com/fujiyamaorange/swc-transformerkarajian-rutypescriptguan-shu-ji-shu-besutopurakuteisu",
-      conference: "TSKaigi 2024"
+      conference: "TSKaigi 2024",
     },
     {
       url: "https://speakerdeck.com/fujiyamaorange/iphone-eye-trackingji-neng-karaxue-buyasasiiakusesibiritei",
-      conference: "フロントエンドカンファレンス北海道 2025"
-    }
+      conference: "フロントエンドカンファレンス北海道 2025",
+    },
   ];
 
   const activities = await Promise.all(
@@ -56,7 +56,7 @@ const Home = async () => {
     }),
   );
 
-  return (  
+  return (
     <>
       <MySelf profile={profile} />
       <TalkTheStage talks={talks} />

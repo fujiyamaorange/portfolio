@@ -15,7 +15,7 @@ interface Talk {
 
 type Props = {
   talks: Talk[];
-};  
+};
 
 const jumpLink = (url: string) => {
   window.open(url, "_blank");
@@ -70,7 +70,9 @@ export const TalkTheStage = (props: Props) => {
               </div>
               <div className="mt-4 text-sm text-gray-400">
                 {talk.author && <p>by {talk.author}</p>}
-                {talk.date && <p>{new Date(talk.date).toLocaleDateString('ja-JP')}</p>}
+                {talk.date && (
+                  <p>{new Date(talk.date).toLocaleDateString("ja-JP")}</p>
+                )}
               </div>
             </div>
           </article>

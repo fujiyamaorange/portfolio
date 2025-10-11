@@ -7,7 +7,7 @@
     "build:posts": "ts-node --project tsconfig.builder.json ./src/builder/posts.ts",
     "start": "next start",
     "lint": "biome check ./",
-    "fmt": "biome check --apply ./",
+    "fmt": "biome format --write ./",
     "fmt:unsafe": "biome check --apply-unsafe ./",
     "export": "next build && next export",
     "serve": "npm run export && serve ./out",
