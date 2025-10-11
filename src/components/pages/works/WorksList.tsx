@@ -11,16 +11,15 @@ export const WorksList = ({ contents }: Props) => {
     <main className="absolute w-screen px-8 pt-8 text-white top-16">
       <section className="flex flex-col justify-center">
         {contents.map((work: works, i: number) => {
-          const markup = { __html: work.explanation }
+          const markup = { __html: work.explanation || "" }
           return (
-            <>
-              <div
-                key={work.id}
-                className={clsx("flex flex-col mb-8 text-white mx-auto", {
-                  "sm:flex-row-reverse animate-slidein-from-right": i % 2 === 1,
-                  "sm:flex-row animate-slidein-from-left": i % 2 === 0,
-                })}
-              >
+            <div
+              key={work.id}
+              className={clsx("flex flex-col mb-8 text-white mx-auto", {
+                "sm:flex-row-reverse animate-slidein-from-right": i % 2 === 1,
+                "sm:flex-row animate-slidein-from-left": i % 2 === 0,
+              })}
+            >
                 <NextImage
                   src={work.image.url}
                   width={work.image.width}
@@ -108,8 +107,7 @@ export const WorksList = ({ contents }: Props) => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </>
+            </div>
           );
         })}
       </section>
