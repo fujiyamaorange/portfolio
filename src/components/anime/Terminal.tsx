@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import styles from "@/styles/Terminal.module.css";
 import type { profile } from "@/types/cms-types";
-import clsx from "clsx";
 
 type Props = {
   data: profile;

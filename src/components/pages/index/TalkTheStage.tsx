@@ -38,7 +38,7 @@ export const TalkTheStage = (props: Props) => {
         </span>
       </div>
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4">
-        {talks.map((talk, i) => (
+        {talks.map((talk, _i) => (
           <article
             key={talk.link}
             className="px-8 py-4 transition duration-150 hover:scale-105 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"

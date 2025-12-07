@@ -1,8 +1,8 @@
 "use client";
 
-import type { PostItem } from "@/types/zenn";
 import Image from "next/image";
 import type { KeyboardEvent } from "react";
+import type { PostItem } from "@/types/zenn";
 
 type Props = {
   articles: PostItem[];

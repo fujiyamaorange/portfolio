@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "biome check ./",
     "fmt": "biome format --write ./",
-    "fmt:unsafe": "biome check --apply-unsafe ./",
+    "fmt:unsafe": "biome check --unsafe --write ./",
     "export": "next build && next export",
     "serve": "npm run export && serve ./out",
     "cms-gen": "npm run microcms-typescript src/schema src/types/cms-types.ts"
