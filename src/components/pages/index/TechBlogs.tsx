@@ -92,6 +92,7 @@ export const TechBlogs = () => {
                   />
                   <p>fujiyamaorange</p>
                 </div>
+                {/* biome-ignore lint/performance/noImgElement: This is intentionally not used */}
                 <img
                   className="mt-2 aspect-1200/630"
                   src={article.imageUrl ?? "/no_image.png"}

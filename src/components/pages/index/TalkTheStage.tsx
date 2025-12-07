@@ -57,6 +57,7 @@ export const TalkTheStage = (props: Props) => {
                 <h3 className="text-lg font-semibold my-4 line-clamp-2">
                   {talk.title}
                 </h3>
+                {/* biome-ignore lint/performance/noImgElement: This is intentionally not used */}
                 <img
                   className="mt-2 w-full object-cover rounded"
                   src={talk.ogpUrl || "/no_image.png"}

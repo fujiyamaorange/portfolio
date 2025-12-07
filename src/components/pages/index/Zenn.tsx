@@ -52,6 +52,7 @@ export const Zenn = (props: Props) => {
                   />
                   <p>{article.authorName.toLowerCase()}</p>
                 </div>
+                {/* biome-ignore lint/performance/noImgElement: This is intentionally not used */}
                 <img
                   className="mt-2"
                   src={props.ogpImages[i] ?? "/no_image.png"}

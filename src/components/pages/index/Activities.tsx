@@ -42,6 +42,7 @@ export const Activities = (props: Props) => {
                 <div className="flex items-center gap-4 mb-4">
                   {activity.repository ?? ""}
                 </div>
+                {/* biome-ignore lint/performance/noImgElement: This is intentionally not used */}
                 <img
                   className="mt-2"
                   src={activity.ogpUrl ?? "/no_image.png"}
