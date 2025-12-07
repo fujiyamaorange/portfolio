@@ -31,7 +31,7 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^24.10.1",
     "@types/react": "19.2.2",
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.22",
     "fs-extra": "^11.3.2",
     "microcms-typescript": "^1.0.15",
     "rss-parser": "^3.13.0",
