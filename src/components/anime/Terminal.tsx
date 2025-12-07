@@ -1,6 +1,6 @@
+import clsx from "clsx";
 import styles from "@/styles/Terminal.module.css";
 import type { profile } from "@/types/cms-types";
-import clsx from "clsx";
 
 type Props = {
   data: profile;
@@ -46,7 +46,7 @@ export const Terminal: React.FC<Props> = ({ data }) => {
             <span className={styles.terminal__prompt__user}>user@ubuntu:</span>
             <span className={styles.terminal__prompt__location}>~</span>
             <span className={styles.terminal__prompt__bling}>$</span>
-            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
+            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: This is intentionally not used */}
             <div dangerouslySetInnerHTML={{ __html: introduce }} />
           </div>
           <div className={styles.terminal__prompt}>

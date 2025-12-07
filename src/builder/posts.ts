@@ -1,6 +1,6 @@
-import type { Member, PostItem } from "@/types/zenn";
 import fs from "fs-extra";
 import Parser from "rss-parser";
+import type { Member, PostItem } from "@/types/zenn";
 import { member } from "../constant/member";
 
 type FeedItem = {

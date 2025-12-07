@@ -1,5 +1,5 @@
-import { type MENU, menus } from "@/constant/menu";
 import Link from "next/link";
+import { type MENU, menus } from "@/constant/menu";
 import { NextImage } from "../basic/NextImage";
 
 export const Nav = () => {

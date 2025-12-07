@@ -7,7 +7,7 @@ export const getOpgImage = async (url: string) => {
     const $ = load(html);
     const ogImage = $('meta[property="og:image"]').attr("content");
     return ogImage || null; // OGP画像URLが見つからなかった場合はnullを返す
-  } catch (error) {
+  } catch (_error) {
     return null;
   }
 };

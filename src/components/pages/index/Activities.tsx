@@ -1,7 +1,7 @@
 "use client";
 
-import type { Activity } from "@/types/activity";
 import type { KeyboardEvent } from "react";
+import type { Activity } from "@/types/activity";
 
 type Props = {
   activities: Activity[];
@@ -28,7 +28,7 @@ export const Activities = (props: Props) => {
         </span>
       </div>
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-4">
-        {activities.map((activity, i) => (
+        {activities.map((activity, _i) => (
           <article
             key={activity.link}
             className="px-8 py-4 transition duration-150 hover:scale-105 bg-slate-800 hover:bg-slate-700 focus:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-white"
@@ -42,6 +42,7 @@ export const Activities = (props: Props) => {
                 <div className="flex items-center gap-4 mb-4">
                   {activity.repository ?? ""}
                 </div>
+                {/* biome-ignore lint/performance/noImgElement: This is intentionally not used */}
                 <img
                   className="mt-2"
                   src={activity.ogpUrl ?? "/no_image.png"}

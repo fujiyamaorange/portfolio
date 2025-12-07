@@ -2,7 +2,7 @@
 
 import { animate } from "animejs";
 import clsx from "clsx";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import styles from "@/styles/ShootingStartsStyle.module.css";
 import { off } from "@/utils/off";
@@ -15,34 +15,9 @@ export const ShootingStars = () => {
   const [vh, setVh] = useState<number>(0);
   const [radius, setRadius] = useState<number>(0);
 
-  const NUM = 120;
-
-  useEffect(() => {
-    if (!isBrowser) return;
-
-    const handler = () => {
-      setVw(
-        Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
-      );
-      setVh(
-        Math.max(
-          document.documentElement.clientHeight,
-          window.innerHeight || 0,
-        ),
-      );
-      starryNight();
-    };
-
-    handler();
-    shootingStars();
-    setRadius(randomRadius());
-
-    on(window, "resize", handler);
-
-    return () => {
-      off(window, "resize", handler);
-    };
-  }, [isBrowser]);
+  const randomRadius = () => {
+    return Math.random() * 0.7 + 0.6;
+  };
 
   const starryNight = () => {
     animate(".sky .star", {
@@ -84,19 +59,46 @@ export const ShootingStars = () => {
     });
   };
 
+  const NUM = 120;
+
+  useEffect(() => {
+    if (!isBrowser) return;
+
+    const handler = () => {
+      setVw(
+        Math.max(document.documentElement.clientWidth, window.innerWidth || 0),
+      );
+      setVh(
+        Math.max(
+          document.documentElement.clientHeight,
+          window.innerHeight || 0,
+        ),
+      );
+      starryNight();
+    };
+
+    handler();
+    shootingStars();
+    setRadius(randomRadius());
+
+    on(window, "resize", handler);
+
+    return () => {
+      off(window, "resize", handler);
+    };
+    // biome-ignore lint/correctness/useExhaustiveDependencies: This is intentionally not exhaustive
+  }, [isBrowser, randomRadius, shootingStars, starryNight]);
+
   const getRandomX = () => {
     return Math.floor(Math.random() * Math.floor(vw)).toString();
   };
   const getRandomY = () => {
     return Math.floor(Math.random() * Math.floor(vh)).toString();
   };
-  const randomRadius = () => {
-    return Math.random() * 0.7 + 0.6;
-  };
 
   return (
     <div className="fixed inset-0 overflow-hidden bg-black">
-      {/* biome-ignore lint/a11y/noSvgWithoutTitle: <explanation> */}
+      {/* biome-ignore lint/a11y/noSvgWithoutTitle: Use svg for animation */}
       <svg className={clsx(styles.sky, "sky")}>
         {[...Array(NUM)].map((_, i) => (
           <circle

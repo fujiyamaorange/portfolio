@@ -16,7 +16,7 @@ export const EagerImage = ({
 >) => {
   const imgRef = useRef<HTMLImageElement>(null);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  // biome-ignore lint/correctness/useExhaustiveDependencies: This is intentionally not exhaustive
   useEffect(() => {
     if (!imgRef.current) return;
 
@@ -46,7 +46,7 @@ export const EagerImage = ({
 
   return (
     <div className={className}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {/* biome-ignore lint/performance/noImgElement: This is intentionally not used */}
       <img {...others} ref={imgRef} data-src={src} alt={alt} />
     </div>
   );

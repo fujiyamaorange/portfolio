@@ -42,7 +42,7 @@ export const getActivities = async (url: string): Promise<Activity> => {
       repository,
       details,
     };
-  } catch (error) {
+  } catch (_error) {
     return {
       title: "404 Not Found",
       link: url,

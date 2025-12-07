@@ -1,4 +1,3 @@
-type Reference<T, R> = T extends "get" ? R : string | null;
 interface GetsType<T> {
   contents: T[];
   totalCount: number;
