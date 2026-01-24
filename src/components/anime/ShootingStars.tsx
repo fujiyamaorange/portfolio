@@ -61,6 +61,7 @@ export const ShootingStars = () => {
 
   const NUM = 120;
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: This is intentionally not exhaustive
   useEffect(() => {
     if (!isBrowser) return;
 
@@ -86,8 +87,7 @@ export const ShootingStars = () => {
     return () => {
       off(window, "resize", handler);
     };
-    // biome-ignore lint/correctness/useExhaustiveDependencies: This is intentionally not exhaustive
-  }, [isBrowser, randomRadius, shootingStars, starryNight]);
+  }, [isBrowser]);
 
   const getRandomX = () => {
     return Math.floor(Math.random() * Math.floor(vw)).toString();
